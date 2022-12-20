@@ -66,7 +66,7 @@ CUDA_VISIBLE_DEVICES=7 python -W ignore validation.py
     --cache_dataset 
     --cache_rate 0.6
 ```
-### Test
+### 📦 Test
 ```
 CUDA_VISIBLE_DEVICES=7 python -W ignore test.py 
     --resume ./out/epoch_61.pth 
