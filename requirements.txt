@@ -1,0 +1,6 @@
+connected-components-3d
+h5py==3.6.0
+monai==0.9.0
+torch==1.11.0
+tqdm
+fastremap
