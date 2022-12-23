@@ -7,7 +7,8 @@ Universal Model is the first framework for both organ segmentation and tumor det
 This repository provides the official implementation of top 1 solution in Medical Segmentation Decathlon
 
 <b>CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection</b> <br/>
-[Jie Liu](https://ljwztc.github.io)<sup>1</sup>, [Yixiao Zhang](https://scholar.google.com/citations?user=lU3wroMAAAAJ&hl=zh-CN)<sup>2</sup>, [Jie-Neng Chen](https://scholar.google.com/citations?user=yLYj88sAAAAJ&hl=zh-CN)<sup>2</sup>,  [Junfei Xiao](https://lambert-x.github.io)<sup>2</sup>, [Yongyi Lu](https://scholar.google.com/citations?user=rIJ99V4AAAAJ&hl=zh-TW)<sup>2</sup>, [Yixuan Yuan](https://scholar.google.com.au/citations?user=Aho5Jv8AAAAJ&hl=en)<sup>1</sup>, [Alan Yuille](https://scholar.google.com/citations?user=FJ-huxgAAAAJ&hl=zh-CN), [Yucheng Tang](https://tangy5.github.io)<sup>3</sup>, [Zongwei Zhou](https://www.zongweiz.com)<sup>2</sup> <br/>
+[Jie Liu](https://ljwztc.github.io)<sup>1</sup>, [Yixiao Zhang](https://scholar.google.com/citations?user=lU3wroMAAAAJ&hl=zh-CN)<sup>2</sup>, [Jie-Neng Chen](https://scholar.google.com/citations?user=yLYj88sAAAAJ&hl=zh-CN)<sup>2</sup>,  [Junfei Xiao](https://lambert-x.github.io)<sup>2</sup>, [Yongyi Lu](https://scholar.google.com/citations?user=rIJ99V4AAAAJ&hl=zh-TW)<sup>2</sup>, <br/>
+[Yixuan Yuan](https://scholar.google.com.au/citations?user=Aho5Jv8AAAAJ&hl=en)<sup>1</sup>, [Alan Yuille](https://scholar.google.com/citations?user=FJ-huxgAAAAJ&hl=zh-CN), [Yucheng Tang](https://tangy5.github.io)<sup>3</sup>, [Zongwei Zhou](https://www.zongweiz.com)<sup>2</sup> <br/>
 <sup>1 </sup>City University of Hong Kong,   <sup>2 </sup>Johns Hopkins University,   <sup>3 </sup>NVIDIA <br/>
 paper | [code](https://github.com/ljwztc/CLIP-Driven-Universal-Model) | [slides](https://www.zongweiz.com/_files/ugd/deaea1_eb803117f2ee406fb83a253dd90cab8c.pdf) | poster | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA) | blog
 
