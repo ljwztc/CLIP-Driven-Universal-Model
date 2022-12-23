@@ -1,11 +1,14 @@
-## CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection
-**Universal Model is the first framework for both organ segmentation and tumor detection. We take the top spot of [MSD competition leaderboard](https://decathlon-10.grand-challenge.org/evaluation/challenge/leaderboard/).**
+## CLIP-Driven Universal Model
+Universal Model is the first framework for both organ segmentation and tumor detection. We take the top spot of [MSD competition leaderboard](https://decathlon-10.grand-challenge.org/evaluation/challenge/leaderboard/).
 
 <img src="teaser_fig.png" width = "480" height = "345" alt="" align=center />
 
-> [**CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection**]()               
-> [Jie Liu](https://ljwztc.github.io), [Yucheng Tang](https://tangy5.github.io), [Yixiao Zhang](https://scholar.google.com/citations?user=lU3wroMAAAAJ&hl=zh-CN), [Jie-Neng Chen](https://scholar.google.com/citations?user=yLYj88sAAAAJ&hl=zh-CN),  [Junfei Xiao](https://lambert-x.github.io), [Yongyi Lu](https://scholar.google.com/citations?user=rIJ99V4AAAAJ&hl=zh-TW), [Yixuan Yuan](https://scholar.google.com.au/citations?user=Aho5Jv8AAAAJ&hl=en), [Alan Yuille](https://scholar.google.com/citations?user=FJ-huxgAAAAJ&hl=zh-CN), [Zongwei Zhou](https://www.zongweiz.com)  
-> *[arXiv]()* 
+## Paper
+This repository provides the official implementation of top 1 solution in Medical Segmentation Decathlon
+
+<b>CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection</b> <br/>
+[Jie Liu](https://ljwztc.github.io), [Yixiao Zhang](https://scholar.google.com/citations?user=lU3wroMAAAAJ&hl=zh-CN), [Jie-Neng Chen](https://scholar.google.com/citations?user=yLYj88sAAAAJ&hl=zh-CN),  [Junfei Xiao](https://lambert-x.github.io), [Yongyi Lu](https://scholar.google.com/citations?user=rIJ99V4AAAAJ&hl=zh-TW), [Yixuan Yuan](https://scholar.google.com.au/citations?user=Aho5Jv8AAAAJ&hl=en), [Alan Yuille](https://scholar.google.com/citations?user=FJ-huxgAAAAJ&hl=zh-CN), [Yucheng Tang](https://tangy5.github.io), [Zongwei Zhou](https://www.zongweiz.com)  
+
 
 ### ⏳ Dataset Link
 - 01 [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
