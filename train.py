@@ -21,7 +21,7 @@ from monai.data import load_decathlon_datalist, decollate_batch, DistributedSamp
 from monai.transforms import AsDiscrete
 from monai.metrics import DiceMetric
 
-from model.SwinUNETR_partial_v2 import SwinUNETR
+from model.SwinUNETR_partial import SwinUNETR
 from dataset.dataloader import get_loader
 from utils import loss
 from utils.utils import dice_score, check_data, TEMPLATE, get_key, NUM_CLASS
@@ -227,7 +227,7 @@ def main():
     ## hyperparameter
     parser.add_argument('--max_epoch', default=2000, type=int, help='Number of training epoches')
     parser.add_argument('--store_num', default=10, type=int, help='Store model how often')
-    parser.add_argument('--warmup_epoch', default=15, type=int, help='number of warmup epochs')
+    parser.add_argument('--warmup_epoch', default=100, type=int, help='number of warmup epochs')
     parser.add_argument('--lr', default=1e-4, type=float, help='Learning rate')
     parser.add_argument('--weight_decay', default=1e-5, help='Weight Decay')
     ## dataset
@@ -240,7 +240,7 @@ def main():
     ### for cross_validation 'cross_validation/PAOT_0' 1 2 3 4
     parser.add_argument('--data_root_path', default='/home/jliu288/data/whole_organ/', help='data root path')
     parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
-    parser.add_argument('--batch_size', default=1, help='batch size')
+    parser.add_argument('--batch_size', default=2, help='batch size')
     parser.add_argument('--num_workers', default=8, type=int, help='workers numebr for DataLoader')
     parser.add_argument('--a_min', default=-175, type=float, help='a_min in ScaleIntensityRanged')
     parser.add_argument('--a_max', default=250, type=float, help='a_max in ScaleIntensityRanged')
