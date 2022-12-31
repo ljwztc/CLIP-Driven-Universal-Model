@@ -86,6 +86,7 @@ CUDA_VISIBLE_DEVICES=7 python -W ignore test.py
 - [x] Dataset link
 - [ ] Model release
 - [ ] Pesudo label release
+- [ ] Tutorials for generalizability, transferability, and extensibility
 
 ## 🛡️ License
 
