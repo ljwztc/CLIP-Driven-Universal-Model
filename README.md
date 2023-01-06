@@ -36,6 +36,9 @@ paper | [code](https://github.com/ljwztc/CLIP-Driven-Universal-Model) | slides |
 > fastremap  
 
 ```
+python3 -m venv universal
+source /data/zzhou82/environments/universal/bin/activate
+
 pip install -r requirements.txt
 pip install 'monai[all]'
 cd pretrained_weights/
