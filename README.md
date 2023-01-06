@@ -76,12 +76,7 @@ CUDA_VISIBLE_DEVICES=7 python -W ignore validation.py
 ```
 ## 📦 Test
 ```
-CUDA_VISIBLE_DEVICES=7 python -W ignore test.py 
-    --resume ./out/epoch_61.pth 
-    --data_root_path /mnt/medical_data/PublicAbdominalData/ 
-    --store_result 
-    --cache_dataset 
-    --cache_rate 0.6
+CUDA_VISIBLE_DEVICES=7 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path /mnt/medical_data/PublicAbdominalData/ --store_result --cache_dataset --cache_rate 0.6
 ```
 
 ## 📒 To do
