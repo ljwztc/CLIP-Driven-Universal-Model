@@ -180,6 +180,7 @@ def main():
                       attn_drop_rate=0.0,
                       dropout_path_rate=0.0,
                       use_checkpoint=False,
+                      encoding='word_embedding'
                      )
     
     #Load pre-trained weights

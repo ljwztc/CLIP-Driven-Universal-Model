@@ -70,15 +70,6 @@ def validation(model, ValLoader, args, i):
     for index, batch in enumerate(tqdm(ValLoader)):
         # print('%d processd' % (index))
         image, label, name = batch["image"].cuda(), batch["post_label"], batch["name"]
-        # print(name, label.shape)
-        # ###
-        # print(name)
-        # import SimpleITK as sitk
-        # out = sitk.GetImageFromArray(image[0][0].cpu().numpy())
-        # sitk.WriteImage(out,'saved_img.nii.gz')
-        # out = sitk.GetImageFromArray(batch["label"][0][0].numpy())
-        # sitk.WriteImage(out,'saved_gt.nii.gz')
-        # ###
         with torch.no_grad():
             pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model, overlap=args.overlap, mode='gaussian')
             pred_sigmoid = F.sigmoid(pred)
@@ -96,20 +87,8 @@ def validation(model, ValLoader, args, i):
             for organ in organ_list:
                 if torch.sum(label[b,organ-1,:,:,:]) != 0:
                     dice_organ, recall, precision = dice_score(pred_hard_post[b,organ-1,:,:,:].cuda(), label[b,organ-1,:,:,:].cuda())
-                    # try:
-                    #     nsd = normalized_surface_dice(pred_hard_post[b,organ-1,:,:,:].numpy(),label[b,organ-1,:,:,:].numpy(),1)
-                    # except:
-                    #     nsd = 1
-                    # ## specificity and sensitivity
-                    # dice_organ, sensitivity, precision, specificity = dice_score(pred_hard_post[b,organ-1,:,:,:].cuda(), label[b,organ-1,:,:,:].cuda(), spe_sen=True)
-                    # dice_list[template_key][0][organ-1] += sensitivity.item()
-                    # dice_list[template_key][1][organ-1] += specificity.item()
-                    # dice_list[template_key][2][organ-1] += 1
-                    # ##
                     dice_list[template_key][0][organ-1] += dice_organ.item()
                     dice_list[template_key][1][organ-1] += 1
-                    # nsd_list[template_key][0][organ-1] += nsd
-                    # nsd_list[template_key][1][organ-1] += 1
 
                     content += '%s: %.4f, '%(ORGAN_NAME[organ-1], dice_organ.item())
                     print('%s: dice %.4f, recall %.4f, precision %.4f'%(ORGAN_NAME[organ-1], dice_organ.item(), recall.item(), precision.item()))
@@ -118,9 +97,6 @@ def validation(model, ValLoader, args, i):
         torch.cuda.empty_cache()
     
     ave_organ_dice = np.zeros((2, NUM_CLASS))
-    # ave_organ_nsd = np.zeros((2, NUM_CLASS))
-    # print('sensitivity', dice_list[template_key][0] / dice_list[template_key][2])
-    # print('specificity', dice_list[template_key][1] / dice_list[template_key][2])
 
     with open('out/'+args.log_name+f'/b_val_{i}.txt', 'w') as f:
         for key in TEMPLATE.keys():
@@ -133,14 +109,8 @@ def validation(model, ValLoader, args, i):
                 ave_organ_dice[0][organ-1] += dice_list[key][0][organ-1]
                 ave_organ_dice[1][organ-1] += dice_list[key][1][organ-1]
 
-                # dice = nsd_list[key][0][organ-1] / nsd_list[key][1][organ-1]
-                # content1 += '%s: %.4f, '%(ORGAN_NAME[organ-1], dice)
-                # ave_organ_nsd[0][organ-1] += nsd_list[key][0][organ-1]
-                # ave_organ_nsd[1][organ-1] += nsd_list[key][1][organ-1]
             print(content)
-            # print(content1)
             f.write(content)
-            # f.write(content1)
             f.write('\n')
         content = 'Average | '
         for i in range(NUM_CLASS):
@@ -148,13 +118,6 @@ def validation(model, ValLoader, args, i):
         print(content)
         f.write(content)
         f.write('\n')
-
-        # content = 'Average NSD | '
-        # for i in range(NUM_CLASS):
-        #     content += '%s: %.4f, '%(ORGAN_NAME[i], ave_organ_nsd[0][i] / ave_organ_nsd[1][i])
-        # print(content)
-        # f.write(content)
-        # f.write('\n')
 
         print(np.mean(ave_organ_dice[0] / ave_organ_dice[1]))
         f.write('%s: %.4f, '%('average', np.mean(ave_organ_dice[0] / ave_organ_dice[1])))
