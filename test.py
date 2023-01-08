@@ -15,7 +15,7 @@ from monai.metrics import DiceMetric
 from monai.inferers import sliding_window_inference
 
 from model.SwinUNETR_partial import SwinUNETR
-from dataset.dataloader_test import get_loader
+from dataset.dataloader import get_loader
 from utils import loss
 from utils.utils import dice_score, threshold_organ, visualize_label, merge_label, get_key
 from utils.utils import TEMPLATE, ORGAN_NAME, NUM_CLASS
