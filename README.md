@@ -1,3 +1,5 @@
+We have document for [common questions](document/common_questions.md).
+
 # CLIP-Driven Universal Model
 
 <img src="teaser_fig.png" width = "480" height = "345" alt="" align=center />
@@ -50,6 +52,50 @@ cd ../
 1. Download the dataset according to the dataset link and arrange the dataset according to the `dataset/dataset_list/PAOT.txt`.  
 2. Modify the ORGAN_DATASET_DIR value in label_transfer.py (line 51) and NUM_WORKER (line 53)  
 3. `python -W ignore label_transfer.py`
+
+
+**Current Template**
+|  Index   | Organ  |
+|  ----  | ----  |
+| 1  | Spleen |
+| 2  | Right Kidney |
+| 3  | Left Kidney |
+| 4  | Gall Bladder |
+| 5  | Esophagus |
+| 6  | Liver |
+| 7  | Stomach |
+| 8  | Aorta |
+| 9  | Postcava |
+| 10  | Portal Vein and Splenic Vein |
+| 11  | Pancreas |
+| 12  | Right Adrenal Gland |
+| 13  | Left Adrenal Gland |
+| 14  | Duodenum |
+| 15  | Hepatic Vessel |
+| 16  | Right Lung |
+| 17  | Left Lung |
+| 18  | Colon |
+| 19  | Intestine |
+| 20  | Rectum |
+| 21  | Bladder |
+| 22  | Prostate |
+| 23  | Head of Femur Left |
+| 24  | Head of Femur Right |
+| 25  | Celiac Truck |
+| 26  | Kidney Tumor |
+| 27  | Liver Tumor |
+| 28  | Pancreas Tumor |
+| 29  | Hepatic Vessel Tumor |
+| 30  | Lung Tumor |
+| 31  | Colon Tumor |
+| 32  | Kidney Cyst |
+
+**How expand to new dataset with new organ?**
+1. Set the following index for new organ. (e.g. 33 for vermiform appendix)  
+2. Check if there are any organs that are not divided into left and right in the dataset. (e.g. kidney, lung, etc.)  
+3. Set up a new transfer list for new dataset in TEMPLATE (line 58 in label_transfer.py). (If a new dataset with Intestine labeled as 1 and vermiform appendix labeled as 2, we set the transfer list as [19, 33])  
+4. Run the program `label_transfer.py` to get new post-processing labels.  
+
 
 
 ## 📦 Training
