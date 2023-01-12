@@ -95,6 +95,7 @@ cd ../
 2. Check if there are any organs that are not divided into left and right in the dataset. (e.g. kidney, lung, etc.) The `RL_Splitd` in `label_transfer.py` is used to processed this case.  
 3. Set up a new transfer list for new dataset in TEMPLATE (line 58 in label_transfer.py). (If a new dataset with Intestine labeled as 1 and vermiform appendix labeled as 2, we set the transfer list as [19, 33])  
 4. Run the program `label_transfer.py` to get new post-processing labels.  
+**More details please take a look at [common questions](documents/common_questions.md)**
 
 
 
