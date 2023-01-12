@@ -2,7 +2,7 @@
 
 - [FAQ](#faq)
   - [How to process noisy label problem in CT dataset?](#how-to-process-noisy-label-problem-in-ct-dataset)
-  - [How to process noisy label problem in CT dataset?](#how-expand-to-new-dataset-with-new-organ)
+  - [How to train new dataset with new organ?](#how-expand-to-new-dataset-with-new-organ)
   - [How to generate specific prediction for different dataset?](#how-to-generate-specific-prediction-for-different-dataset)
  
  ## How to process noisy label problem in CT dataset?
