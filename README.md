@@ -79,8 +79,8 @@ cd ../
 | 20  | Rectum |
 | 21  | Bladder |
 | 22  | Prostate |
-| 23  | Head of Femur Left |
-| 24  | Head of Femur Right |
+| 23  | Left Head of Femur |
+| 24  | Right Head of Femur |
 | 25  | Celiac Truck |
 | 26  | Kidney Tumor |
 | 27  | Liver Tumor |

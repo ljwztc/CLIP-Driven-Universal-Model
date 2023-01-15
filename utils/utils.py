@@ -56,7 +56,7 @@ TEMPLATE={
 }
 
 ORGAN_NAME = ['Spleen', 'Right Kidney', 'Left Kidney', 'Gall Bladder', 'Esophagus', 
-                'Liver', 'Stomach', 'Arota', 'Postcava', 'Portal Vein and Splenic Vein',
+                'Liver', 'Stomach', 'Aorta', 'Postcava', 'Portal Vein and Splenic Vein',
                 'Pancreas', 'Right Adrenal Gland', 'Left Adrenal Gland', 'Duodenum', 'Hepatic Vessel',
                 'Right Lung', 'Left Lung', 'Colon', 'Intestine', 'Rectum', 
                 'Bladder', 'Prostate', 'Left Head of Femur', 'Right Head of Femur', 'Celiac Truck',
