@@ -41,6 +41,7 @@ paper | [code](https://github.com/ljwztc/CLIP-Driven-Universal-Model) | slides |
 python3 -m venv universal
 source /data/zzhou82/environments/universal/bin/activate
 
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install -r requirements.txt
 pip install 'monai[all]'
 cd pretrained_weights/
