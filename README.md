@@ -42,8 +42,8 @@ python3 -m venv universal
 source /data/zzhou82/environments/universal/bin/activate
 
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
-pip install -r requirements.txt
 pip install 'monai[all]'
+pip install -r requirements.txt
 cd pretrained_weights/
 wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
 cd ../
