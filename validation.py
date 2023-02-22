@@ -15,7 +15,7 @@ from monai.transforms import AsDiscrete
 from monai.metrics import DiceMetric
 from monai.inferers import sliding_window_inference
 
-from model.SwinUNETR_partial_v2 import SwinUNETR
+from model.Universal_model import Universal_model
 from dataset.dataloader import get_loader
 from utils import loss
 from utils.utils import dice_score, TEMPLATE, ORGAN_NAME, merge_label, visualize_label, get_key, NUM_CLASS
@@ -140,6 +140,7 @@ def main():
     parser.add_argument('--start_epoch', default=490, type=int, help='Number of start epoches')
     parser.add_argument('--end_epoch', default=490, type=int, help='Number of end epoches')
     parser.add_argument('--epoch_interval', default=100, type=int, help='Number of start epoches')
+    parser.add_argument('--backbone', default='unet', help='backbone [swinunetr or unet]')
 
     ## hyperparameter
     parser.add_argument('--max_epoch', default=1000, type=int, help='Number of training epoches')
@@ -178,37 +179,12 @@ def main():
     args = parser.parse_args()
 
     # prepare the 3D model
-    model = SwinUNETR(img_size=(args.roi_x, args.roi_y, args.roi_z),
-                      in_channels=1,
-                      out_channels=NUM_CLASS,
-                      feature_size=48,
-                      drop_rate=0.0,
-                      attn_drop_rate=0.0,
-                      dropout_path_rate=0.0,
-                      use_checkpoint=False,
-                      encoding='word_embedding'
-                     )
-    
-    # for i in range(args.start_epoch, args.end_epoch+1, args.epoch_interval):
-    #     #Load pre-trained weights
-    #     store_path = f'out/{args.log_name}/aepoch_{i}.pth'
-    #     store_dict = model.state_dict()
-    #     load_dict = torch.load(store_path)['net']
-
-    #     for key, value in load_dict.items():
-    #         name = '.'.join(key.split('.')[1:])
-    #         store_dict[name] = value
-
-    #     model.load_state_dict(store_dict)
-    #     print(f'Load epoch_{i} weights')
-
-    #     model.cuda()
-
-    #     torch.backends.cudnn.benchmark = True
-
-    #     validation_loader, val_transforms = get_loader(args)
-
-    #     validation(model, validation_loader, args, i)
+    model = Universal_model(img_size=(args.roi_x, args.roi_y, args.roi_z),
+                    in_channels=1,
+                    out_channels=NUM_CLASS,
+                    backbone=args.backbone,
+                    encoding='word_embedding'
+                    )
 
     #Load pre-trained weights
     store_path_root = 'out/Nvidia/new_clip/clip1_partialv2/epoch_***.pth'

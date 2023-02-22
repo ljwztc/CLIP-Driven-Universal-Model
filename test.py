@@ -14,7 +14,7 @@ from monai.transforms import AsDiscrete
 from monai.metrics import DiceMetric
 from monai.inferers import sliding_window_inference
 
-from model.SwinUNETR_partial import SwinUNETR
+from model.Universal_model import Universal_model
 from dataset.dataloader import get_loader
 from utils import loss
 from utils.utils import dice_score, threshold_organ, visualize_label, merge_label, get_key
@@ -172,16 +172,12 @@ def main():
     args = parser.parse_args()
 
     # prepare the 3D model
-    model = SwinUNETR(img_size=(args.roi_x, args.roi_y, args.roi_z),
-                      in_channels=1,
-                      out_channels=NUM_CLASS,
-                      feature_size=48,
-                      drop_rate=0.0,
-                      attn_drop_rate=0.0,
-                      dropout_path_rate=0.0,
-                      use_checkpoint=False,
-                      encoding='word_embedding'
-                     )
+    model = Universal_model(img_size=(args.roi_x, args.roi_y, args.roi_z),
+                    in_channels=1,
+                    out_channels=NUM_CLASS,
+                    backbone=args.backbone,
+                    encoding='word_embedding'
+                    )
     
     #Load pre-trained weights
     store_dict = model.state_dict()
