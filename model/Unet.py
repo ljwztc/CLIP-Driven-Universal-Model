@@ -133,3 +133,4 @@ class UNet3D(nn.Module):
         # self.out = self.out_tr(self.out_up_64)
 
         return self.out512, self.out_up_64
+

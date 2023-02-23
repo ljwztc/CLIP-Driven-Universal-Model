@@ -8,6 +8,7 @@ import torch.utils.checkpoint as checkpoint
 from torch.nn import LayerNorm
 from model.SwinUNETR import SwinUNETR
 from model.Unet import UNet3D
+from model.DiNTS import TopologyInstance, DiNTS
 
 
 
@@ -45,6 +46,38 @@ class Universal_model(nn.Module):
                 nn.GroupNorm(16, 64),
                 nn.ReLU(inplace=True),
                 nn.Conv3d(64, 8, kernel_size=1)
+            )
+            self.GAP = nn.Sequential(
+                nn.GroupNorm(16, 512),
+                nn.ReLU(inplace=True),
+                torch.nn.AdaptiveAvgPool3d((1,1,1)),
+                nn.Conv3d(512, 256, kernel_size=1, stride=1, padding=0)
+            )
+        elif backbone == 'dints':
+            ckpt = torch.load('./model/arch_code_cvpr.pth')
+            node_a = ckpt["node_a"]
+            arch_code_a = ckpt["arch_code_a"]
+            arch_code_c = ckpt["arch_code_c"]
+
+            dints_space = TopologyInstance(
+                    channel_mul=1.0,
+                    num_blocks=12,
+                    num_depths=4,
+                    use_downsample=True,
+                    arch_code=[arch_code_a, arch_code_c]
+                )
+
+            self.backbone = DiNTS(
+                    dints_space=dints_space,
+                    in_channels=1,
+                    num_classes=3,
+                    use_downsample=True,
+                    node_a=node_a,
+                )
+            self.precls_conv = nn.Sequential(
+                nn.GroupNorm(16, 32),
+                nn.ReLU(inplace=True),
+                nn.Conv3d(32, 8, kernel_size=1)
             )
             self.GAP = nn.Sequential(
                 nn.GroupNorm(16, 512),
