@@ -208,7 +208,7 @@ def main():
     ## model load
     parser.add_argument('--backbone', default='swinunetr', help='backbone [swinunetr or unet or dints]')
     parser.add_argument('--resume', default=None, help='The path resume from checkpoint')
-    parser.add_argument('--pretrain', default='./pretrained_weights/Genesis_Chest_CT.pt',  #swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
+    parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt',
                         help='The path of pretrain model')
     parser.add_argument('--trans_encoding', default='word_embedding', 
                         help='the type of encoding: rand_embedding or word_embedding')
