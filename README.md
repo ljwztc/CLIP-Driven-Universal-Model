@@ -1,4 +1,4 @@
-We have document for [common questions](documents/common_questions.md).
+We have document for [common questions for code](documents/common_code_questions.md) and [common questions for paper](documents/common_paper_questions.md).
 
 # CLIP-Driven Universal Model
 
