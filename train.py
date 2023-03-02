@@ -69,7 +69,7 @@ def validation(model, ValLoader, args):
         image, label, name = batch["image"].cuda(), batch["post_label"], batch["name"]
         print(name, image.shape)
         with torch.no_grad():
-            pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model)
+            pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model, overlap=args.overlap, mode='gaussian')
             pred_sigmoid = F.sigmoid(pred)
         
         B = pred_sigmoid.shape[0]
@@ -242,6 +242,7 @@ def main():
     parser.add_argument('--roi_y', default=96, type=int, help='roi size in y direction')
     parser.add_argument('--roi_z', default=96, type=int, help='roi size in z direction')
     parser.add_argument('--num_samples', default=2, type=int, help='sample number in each ct')
+    parser.add_argument('--overlap', default=0.5, type=float, help='overlap for sliding_window_inference')
 
     parser.add_argument('--phase', default='train', help='train or validation or test')
     parser.add_argument('--uniform_sample', action="store_true", default=False, help='whether utilize uniform sample strategy')
