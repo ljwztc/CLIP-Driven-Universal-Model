@@ -221,12 +221,11 @@ def main():
     parser.add_argument('--lr', default=1e-4, type=float, help='Learning rate')
     parser.add_argument('--weight_decay', default=1e-5, help='Weight Decay')
     ## dataset
-    parser.add_argument('--dataset_list', nargs='+', default=['PAOT_123457891213', 'PAOT_10']) # 'PAOT', 'felix'
+    parser.add_argument('--dataset_list', nargs='+', default=['PAOT_123457891213', 'PAOT_10_inner']) # 'PAOT', 'felix'
     ### please check this argment carefully
     ### PAOT: include PAOT_123457891213 and PAOT_10
     ### PAOT_123457891213: include 1 2 3 4 5 7 8 9 12 13
-    ### PAOT_10_inner: same with NVIDIA for comparison
-    ### PAOT_10: original division
+    ### PAOT_10_inner
     parser.add_argument('--data_root_path', default='/computenodes/node31/team1/jliu/data/ct_data/', help='data root path')
     parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
     parser.add_argument('--batch_size', default=1, help='batch size')
