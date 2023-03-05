@@ -118,6 +118,7 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --da
 ## 📒 To do
 - [x] Code release
 - [x] Dataset link
+- [x] Support different backbones (SwinUNETR, Unet, DiNTS, Unet++)
 - [ ] Model release
 - [ ] Pesudo label release
 - [ ] Tutorials for generalizability, transferability, and extensibility
@@ -125,6 +126,10 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --da
 ## 🛡️ License
 
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
+
+## 🙏 Acknowledgement
+
+A lot of code is modified from [monai](https://github.com/Project-MONAI/MONAI).
 
 ## 📝 Citation
 
