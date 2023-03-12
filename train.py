@@ -69,7 +69,7 @@ def validation(model, ValLoader, args):
         image, label, name = batch["image"].cuda(), batch["post_label"], batch["name"]
         print(name, image.shape)
         with torch.no_grad():
-            pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model, overlap=args.overlap, mode='gaussian')
+            pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model)
             pred_sigmoid = F.sigmoid(pred)
         
         B = pred_sigmoid.shape[0]
@@ -139,7 +139,11 @@ def process(args):
     # loss_function = DiceCELoss(to_onehot_y=True, softmax=True)
     loss_seg_DICE = loss.DiceLoss(num_classes=NUM_CLASS).to(args.device)
     loss_seg_CE = loss.Multi_BCELoss(num_classes=NUM_CLASS).to(args.device)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    if args.backbone == 'unetpp':
+        optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9,
+                              nesterov=False, weight_decay=1e-4)
+    else:
+        optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
     scheduler = LinearWarmupCosineAnnealingLR(optimizer, warmup_epochs=args.warmup_epoch, max_epochs=args.max_epoch)
 
@@ -206,9 +210,9 @@ def main():
     ## logging
     parser.add_argument('--log_name', default='unet', help='The path resume from checkpoint')
     ## model load
-    parser.add_argument('--backbone', default='swinunetr', help='backbone [swinunetr or unet or dints]')
+    parser.add_argument('--backbone', default='unet', help='backbone [swinunetr or unet or dints or unetpp]')
     parser.add_argument('--resume', default=None, help='The path resume from checkpoint')
-    parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt',
+    parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt',  #swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
                         help='The path of pretrain model')
     parser.add_argument('--trans_encoding', default='word_embedding', 
                         help='the type of encoding: rand_embedding or word_embedding')
@@ -225,7 +229,8 @@ def main():
     ### please check this argment carefully
     ### PAOT: include PAOT_123457891213 and PAOT_10
     ### PAOT_123457891213: include 1 2 3 4 5 7 8 9 12 13
-    ### PAOT_10_inner
+    ### PAOT_10_inner: same with NVIDIA for comparison
+    ### PAOT_10: original division
     parser.add_argument('--data_root_path', default='/computenodes/node31/team1/jliu/data/ct_data/', help='data root path')
     parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
     parser.add_argument('--batch_size', default=1, help='batch size')
@@ -241,7 +246,6 @@ def main():
     parser.add_argument('--roi_y', default=96, type=int, help='roi size in y direction')
     parser.add_argument('--roi_z', default=96, type=int, help='roi size in z direction')
     parser.add_argument('--num_samples', default=2, type=int, help='sample number in each ct')
-    parser.add_argument('--overlap', default=0.5, type=float, help='overlap for sliding_window_inference')
 
     parser.add_argument('--phase', default='train', help='train or validation or test')
     parser.add_argument('--uniform_sample', action="store_true", default=False, help='whether utilize uniform sample strategy')

@@ -1,12 +1,16 @@
 import os, sys
 import cc3d
 import fastremap
-
+import csv
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
+#from pyod.models.knn import KNN
 from math import ceil
 from scipy.ndimage.filters import gaussian_filter
 import warnings
@@ -173,7 +177,7 @@ TUMOR_ORGAN = {
 }
 
 
-def organ_post_process(pred_mask, organ_list,save_dir,args):
+def organ_post_process(pred_mask, organ_list, save_dir, args):
     post_pred_mask = np.zeros(pred_mask.shape)
     plot_save_path = save_dir
     log_path = args.log_name
@@ -311,16 +315,15 @@ def organ_post_process(pred_mask, organ_list,save_dir,args):
                 continue ## the le
             elif organ in [1,2,3,4,5,6,7,8,9,12,13,14,18,19,20,21,22,23,24,25]: ## rest organ index
                 post_pred_mask[b,organ-1] = extract_topk_largest_candidates(pred_mask[b,organ-1], 1)
-            elif organ in [28,29,30,31,32]:
-                post_pred_mask[b,organ-1] = extract_topk_largest_candidates(pred_mask[b,organ-1], TUMOR_NUM[ORGAN_NAME[organ-1]], area_least=TUMOR_SIZE[ORGAN_NAME[organ-1]])
+            # elif organ in [28,29,30,31,32]:
+            #     post_pred_mask[b,organ-1] = extract_topk_largest_candidates(pred_mask[b,organ-1], TUMOR_NUM[ORGAN_NAME[organ-1]], area_least=TUMOR_SIZE[ORGAN_NAME[organ-1]])
             elif organ in [26,27]:
                 organ_mask = merge_and_top_organ(pred_mask[b], TUMOR_ORGAN[ORGAN_NAME[organ-1]])
                 post_pred_mask[b,organ-1] = organ_region_filter_out(pred_mask[b,organ-1], organ_mask)
-                post_pred_mask[b,organ-1] = extract_topk_largest_candidates(post_pred_mask[b,organ-1], TUMOR_NUM[ORGAN_NAME[organ-1]], area_least=TUMOR_SIZE[ORGAN_NAME[organ-1]])
-                print('filter out')
+                # post_pred_mask[b,organ-1] = extract_topk_largest_candidates(post_pred_mask[b,organ-1], TUMOR_NUM[ORGAN_NAME[organ-1]], area_least=TUMOR_SIZE[ORGAN_NAME[organ-1]])
             else:
                 post_pred_mask[b,organ-1] = pred_mask[b,organ-1]
-    return post_pred_mask, total_anomly_slice_number
+    return post_pred_mask
 
 def lung_overlap_post_process(pred_mask):
     new_mask = np.zeros(pred_mask.shape, np.uint8)

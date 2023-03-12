@@ -53,7 +53,7 @@ def validation(model, ValLoader, val_transforms, args):
             content = 'case%s| '%(name[b])
             template_key = get_key(name[b])
             organ_list = TEMPLATE[template_key]
-            pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list)
+            pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list, args.log_name+'/'+name[0].split('/')[0]+'/'+name[0].split('/')[-1],args)
             pred_hard_post = torch.tensor(pred_hard_post)
 
             for organ in organ_list:

@@ -81,9 +81,9 @@ def validation(model, ValLoader, args, i):
             content = 'case%s| '%(name[b])
             template_key = get_key(name[b])
             organ_list = TEMPLATE[template_key]
-            # pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list)
-            # pred_hard_post = torch.tensor(pred_hard_post)
-            pred_hard_post = pred_hard
+            pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list, args.log_name+'/'+name[0].split('/')[0]+'/'+name[0].split('/')[-1],args)
+            pred_hard_post = torch.tensor(pred_hard_post)
+            # pred_hard_post = pred_hard
             for organ in organ_list:
                 if torch.sum(label[b,organ-1,:,:,:]) != 0:
                     dice_organ, recall, precision = dice_score(pred_hard_post[b,organ-1,:,:,:].cuda(), label[b,organ-1,:,:,:].cuda())

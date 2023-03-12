@@ -9,13 +9,13 @@ from torch.nn import LayerNorm
 from model.SwinUNETR import SwinUNETR
 from model.Unet import UNet3D
 from model.DiNTS import TopologyInstance, DiNTS
+from model.Unetpp import BasicUNetPlusPlus
 
 
 
 
 class Universal_model(nn.Module):
-    def __init__(
-        self, img_size, in_channels, out_channels, backbone = 'swinunetr', encoding = 'rand_embedding'):
+    def __init__(self, img_size, in_channels, out_channels, backbone = 'swinunetr', encoding = 'rand_embedding'):
         # encoding: rand_embedding or word_embedding
         super().__init__()
         self.backbone_name = backbone
@@ -84,6 +84,19 @@ class Universal_model(nn.Module):
                 nn.ReLU(inplace=True),
                 torch.nn.AdaptiveAvgPool3d((1,1,1)),
                 nn.Conv3d(512, 256, kernel_size=1, stride=1, padding=0)
+            )
+        elif backbone == 'unetpp':
+            self.backbone = BasicUNetPlusPlus(spatial_dims=3, features=(32, 32, 64, 128, 256, 32))
+            self.precls_conv = nn.Sequential(
+                nn.GroupNorm(16, 32),
+                nn.ReLU(inplace=True),
+                nn.Conv3d(32, 8, kernel_size=1)
+            )
+            self.GAP = nn.Sequential(
+                nn.GroupNorm(16, 256),
+                nn.ReLU(inplace=True),
+                torch.nn.AdaptiveAvgPool3d((1,1,1)),
+                nn.Conv3d(256, 256, kernel_size=1, stride=1, padding=0)
             )
         else:
             raise Exception('{} backbone is not implemented in curretn version'.format(backbone))
