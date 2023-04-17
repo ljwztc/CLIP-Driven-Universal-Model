@@ -67,5 +67,5 @@ In some datasets, the annotation only includes organs and does not include tumor
 We add `pred_pseudo.py` file, where you can save the generated pseudo label without post label. `python -W ignore test.py --resume MODEL.pth --data_root_path YOUR_DATA_DIR`
 
  ## How to customize CLIP embedding for your own dataset?
-The clip embedding is generated with text encode in (CLIP)[https://github.com/openai/CLIP]. We offer example in `pretrained_weights/clip_embedding.py` and you should revise `ORGAN_NAME` according to your dataset. 
+The clip embedding is generated with text encode in [CLIP](https://github.com/openai/CLIP). We offer example in `pretrained_weights/clip_embedding.py` and you should revise `ORGAN_NAME` according to your dataset. 
 
