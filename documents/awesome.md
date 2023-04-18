@@ -2,9 +2,9 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 
-Curated list of awesome medical universal models (UMs), or medical fundation models.
+Curated list of awesome medical universal models (UMs), or medical foundation models.
 
-**Universal models** (UMs), trained on large and diverse datasets, are capable of performing a wide range of tasks with little or no need for task-specific data [[1](https://www.nature.com/articles/s41586-023-05881-4)]. Despite encountering various challenges, such as conflicting class definitions [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098), [4](https://arxiv.org/abs/2303.14444)], partial labeling [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444)], GPU limitations [[3](https://arxiv.org/abs/2203.02098)], among others during training, UMs are able to produce impressive outputs, such as *generalizability* (performing well on new data across different hospitals) [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098)], *transferability* (serving as a powerful pre-training model for other tasks) [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444), [5](https://arxiv.org/abs/2304.06716), [6](https://arxiv.org/abs/2304.03493)], *expertise* (assisting medical experts) [[1](https://www.nature.com/articles/s41586-023-05881-4), [2](https://arxiv.org/abs/2301.00785)], etc.
+**Universal models** (UMs), trained on large and diverse datasets, are capable of performing a wide range of tasks with little or no need for task-specific data [[1](https://www.nature.com/articles/s41586-023-05881-4)]. Despite encountering various challenges, such as conflicting class definitions [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098), [4](https://arxiv.org/abs/2303.14444)], partial labeling [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444)], GPU limitations [[3](https://arxiv.org/abs/2203.02098)], among others during training, UMs are able to produce impressive outputs, such as *generalizability* (performing well on new data across different hospitals) [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098)], *transferability* (serving as a powerful pre-training model for other tasks) [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444), [5](https://arxiv.org/abs/2304.06716), [6](https://arxiv.org/abs/2304.03493)], *expertise* (assisting medical experts) [[1](https://www.nature.com/articles/s41586-023-05881-4), [2](https://arxiv.org/abs/2301.00785)], etc. Some segmentation datasets and models designed for a large number of structures can also be considered as foundation models. For example, totaSegmentator [7](https://arxiv.org/abs/2208.05868) dataset defines 104 whole-body structures for CT segmentation, UNEST [8](https://arxiv.org/abs/2209.14378) covers 133 brain tissues for MRI whole-brain segmentation. 
 
 [1] Moor, Michael, et al. "Foundation models for generalist medical artificial intelligence." Nature 616.7956 (2023): 259-265. \
 [2] Liu, Jie, et al. "CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection." arXiv preprint arXiv:2301.00785 (2023). \
@@ -12,8 +12,10 @@ Curated list of awesome medical universal models (UMs), or medical fundation mod
 [4] Ulrich, Constantin, et al. "MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation." arXiv preprint arXiv:2303.14444 (2023). \
 [5] Huang, Ziyan, et al. "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training." arXiv preprint arXiv:2304.06716 (2023). \
 [6] Ye, Yiwen, et al. "UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner." arXiv preprint arXiv:2304.03493 (2023).
+[7] Wasserthal, et al. "TotalSegmentator: robust segmentation of 104 anatomical structures in CT images." arXiv preprint arXiv:2208.05868. (2023).
+[8] Yu, X. et al. "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation." arXiv preprint arXiv:2209.14378.(2023).
 
-😎 This is an active repository and your contributions are always welcome! **Feel free to submit issue for related work and dataset!** Don't forget to star and fork!
+😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **issues** for related**work and dataset!** Don't forget to star and fork!
 
 # Contents
 - [awesome-medical-universal-model](#awesome-medical-universal-model)
@@ -110,7 +112,7 @@ Curated list of awesome medical universal models (UMs), or medical fundation mod
 [[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
 
 
-## Continue Learning
+## Continual Learning
 
 **Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
 *Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
@@ -126,7 +128,7 @@ Curated list of awesome medical universal models (UMs), or medical fundation mod
  - [Liver Tumor Segmentation Challenge (LiTS)](https://competitions.codalab.org/competitions/17094#learn_the_details) [CT]
  - [Kidney and Kidney Tumor Segmentation (KiTS)](https://kits21.kits-challenge.org/participate#download-block) [CT]
  - [Liver segmentation (3D-IRCADb)](https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/) [CT]
- - [WORD: A large scale dataset, benchmark and clinical applicable study for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD) [CT]
+ - [WORD: A large scale dataset, [benchmark and ](https://github.com/HiLab-git/WORD)clinically[ applicable study](https://github.com/HiLab-git/WORD) for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD) [CT]
  - [AbdomenCT-1K](https://github.com/JunMa11/AbdomenCT-1K) [CT]
  - [Multi-Modality Abdominal Multi-Organ Segmentation Challenge (AMOS)](https://amos22.grand-challenge.org) [CT/MRI]
  - [Decathlon (Liver, Lung, Pancreas, HepaticVessel, Spleen, Colon](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2) [CT]
