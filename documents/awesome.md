@@ -130,7 +130,7 @@ Some segmentation datasets and models designed for a large number of structures 
  - [Liver Tumor Segmentation Challenge (LiTS)](https://competitions.codalab.org/competitions/17094#learn_the_details) [CT]
  - [Kidney and Kidney Tumor Segmentation (KiTS)](https://kits21.kits-challenge.org/participate#download-block) [CT]
  - [Liver segmentation (3D-IRCADb)](https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/) [CT]
- - [WORD: A large scale dataset, [benchmark and ](https://github.com/HiLab-git/WORD)clinically[ applicable study](https://github.com/HiLab-git/WORD) for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD) [CT]
+ - [WORD: A large scale dataset, benchmark and clinical applicable study for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD) [CT]
  - [AbdomenCT-1K](https://github.com/JunMa11/AbdomenCT-1K) [CT]
  - [Multi-Modality Abdominal Multi-Organ Segmentation Challenge (AMOS)](https://amos22.grand-challenge.org) [CT/MRI]
  - [Decathlon (Liver, Lung, Pancreas, HepaticVessel, Spleen, Colon](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2) [CT]
