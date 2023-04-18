@@ -4,14 +4,14 @@
 
 Curated list of awesome medical universal models (UMs), or medical fundation models.
 
-Universal models (UMs), trained on large and diverse datasets, are capable of performing a wide range of tasks with little or no need for task-specific data [[1](https://www.nature.com/articles/s41586-023-05881-4)]. Despite encountering various challenges, such as conflicting class definitions [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098), [4](https://arxiv.org/abs/2303.14444)], partial labeling [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444)], GPU limitations [[3](https://arxiv.org/abs/2203.02098)], among others during training, UMs are able to produce impressive outputs, such as generalizability (performing well on new data across different hospitals) [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098)], transferability (serving as a powerful pre-training model for other tasks) [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444), [5](https://arxiv.org/abs/2304.06716), [6](https://arxiv.org/abs/2304.03493)], expertise (assisting medical experts) [[1](https://www.nature.com/articles/s41586-023-05881-4), [2](https://arxiv.org/abs/2301.00785)], etc.
+**Universal models** (UMs), trained on large and diverse datasets, are capable of performing a wide range of tasks with little or no need for task-specific data [[1](https://www.nature.com/articles/s41586-023-05881-4)]. Despite encountering various challenges, such as conflicting class definitions [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098), [4](https://arxiv.org/abs/2303.14444)], partial labeling [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444)], GPU limitations [[3](https://arxiv.org/abs/2203.02098)], among others during training, UMs are able to produce impressive outputs, such as *generalizability* (performing well on new data across different hospitals) [[2](https://arxiv.org/abs/2301.00785), [3](https://arxiv.org/abs/2203.02098)], *transferability* (serving as a powerful pre-training model for other tasks) [[2](https://arxiv.org/abs/2301.00785), [4](https://arxiv.org/abs/2303.14444), [5](https://arxiv.org/abs/2304.06716), [6](https://arxiv.org/abs/2304.03493)], *expertise* (assisting medical experts) [[1](https://www.nature.com/articles/s41586-023-05881-4), [2](https://arxiv.org/abs/2301.00785)], etc.
 
 [1] Moor, Michael, et al. "Foundation models for generalist medical artificial intelligence." Nature 616.7956 (2023): 259-265. \
 [2] Liu, Jie, et al. "CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection." arXiv preprint arXiv:2301.00785 (2023). \
 [3] Liu, Pengbo, et al. "Universal segmentation of 33 anatomies." arXiv preprint arXiv:2203.02098 (2022). \
 [4] Ulrich, Constantin, et al. "MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation." arXiv preprint arXiv:2303.14444 (2023). \
 [5] Huang, Ziyan, et al. "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training." arXiv preprint arXiv:2304.06716 (2023). \
-[6] Ye, Yiwen, et al. "UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner." arXiv preprint arXiv:2304.03493 (2023). \
+[6] Ye, Yiwen, et al. "UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner." arXiv preprint arXiv:2304.03493 (2023).
 
 😎 This is an active repository and your contributions are always welcome! Feel free to star and fork!
 
@@ -46,7 +46,6 @@ Universal models (UMs), trained on large and diverse datasets, are capable of pe
 [[Paper](https://link.springer.com/chapter/10.1007/978-3-031-12673-4_3#Sec7)] 
 
 
----
 
 ## Segmentation
 
@@ -81,7 +80,6 @@ Universal models (UMs), trained on large and diverse datasets, are capable of pe
 [[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
 
 
----
 
 ## Prompt Learning
 
@@ -90,7 +88,6 @@ Universal models (UMs), trained on large and diverse datasets, are capable of pe
 [Fed. 07, 2023] [ICLR, 2023] \
 [[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
 
----
 
 ## Few-shot Learning
 
@@ -99,7 +96,6 @@ Universal models (UMs), trained on large and diverse datasets, are capable of pe
 [Mar. 29, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)]
 
----
 
 ## Zero-shot Learning
 
@@ -113,7 +109,6 @@ Universal models (UMs), trained on large and diverse datasets, are capable of pe
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
 
----
 
 ## Continue Learning
 
