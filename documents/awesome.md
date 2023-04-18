@@ -15,7 +15,7 @@ Curated list of awesome medical universal models (UMs), or medical foundation mo
 [7] Wasserthal, et al. "TotalSegmentator: robust segmentation of 104 anatomical structures in CT images." arXiv preprint arXiv:2208.05868. (2023).
 [8] Yu, X. et al. "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation." arXiv preprint arXiv:2209.14378.(2023).
 
-😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **issues** for related**work and dataset!** Don't forget to star and fork!
+😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **[issues](https://github.com/ljwztc/CLIP-Driven-Universal-Model/issues/10)** for related**work and dataset!** Don't forget to star and fork!
 
 # Contents
 - [awesome-medical-universal-model](#awesome-medical-universal-model)
