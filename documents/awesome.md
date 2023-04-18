@@ -13,7 +13,7 @@ Curated list of awesome medical universal models (UMs), or medical fundation mod
 [5] Huang, Ziyan, et al. "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training." arXiv preprint arXiv:2304.06716 (2023). \
 [6] Ye, Yiwen, et al. "UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner." arXiv preprint arXiv:2304.03493 (2023).
 
-😎 This is an active repository and your contributions are always welcome! Feel free to star and fork!
+😎 This is an active repository and your contributions are always welcome! **Feel free to submit issue for related work and dataset!** Don't forget to star and fork!
 
 # Contents
 - [awesome-medical-universal-model](#awesome-medical-universal-model)
