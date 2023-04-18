@@ -28,7 +28,7 @@ Some segmentation datasets and models designed for a large number of structures 
   - [Prompt Learning](#prompt-learning)
   - [Few-shot Learning](#few-shot-learning)
   - [Zero-shot Learning](#zero-shot-learning)
-  - [Continue Learning](#continue-learning)
+  - [Continual Learning](#continual-learning)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
   - [Vertebrae](#vertebrae)
