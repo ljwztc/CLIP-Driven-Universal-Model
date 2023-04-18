@@ -14,18 +14,21 @@ This is an active repository and your contributions are always welcome! Feel fre
 - [awesome-medical-universal-model](#awesome-medical-universal-model)
 - [Contents](#contents)
 - [Papers](#papers)
+  - [Perspectives](#perspectives)
   - [Segmentation](#segmentation)
+  - [Prompt Learning](#prompt-learning)
   - [Few-shot learning](#few-shot-learning)
   - [Zero-shot learning](#zero-shot-learning)
   - [Continue learning](#continue-learning)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
   - [Vertebrae](#vertebrae)
+  - [Total Body](#total-body)
 
 
 # Papers
 
-## Perspective
+## Perspectives
 
 **Foundation models for generalist medical artificial intelligence** \
 *PMichael Moor, Oishi Banerjee, Zahra Shakeri Hossein Abad, Harlan M. Krumholz, Jure Leskovec, Eric J. Topol, Pranav Rajpurkar* \
@@ -41,12 +44,12 @@ This is an active repository and your contributions are always welcome! Feel fre
 
 **Universal Segmentation of 33 Anatomies** \
 *Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
-[Mar. 4, 2022] [arXiv, 2022] \
+[Mar. 04, 2022] [arXiv, 2022] \
 [[Paper](https://arxiv.org/abs/2203.02098)]
 
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
-[Jan. 2, 2023] [arXiv, 2023] \
+[Jan. 02, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)]
 
 **MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation** \
@@ -56,7 +59,7 @@ This is an active repository and your contributions are always welcome! Feel fre
 
 **UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner** \
 *Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Yong Xia* \
-[Apr. 7, 2023] [arXiv, 2023] \
+[Apr. 07, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)]
 
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
@@ -105,20 +108,25 @@ This is an active repository and your contributions are always welcome! Feel fre
 
 # Datasets
 ## Abdomen
- - [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
- - [Pancreas-CT TCIA](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT)
- - [Combined Healthy Abdominal Organ Segmentation (CHAOS)](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/)
- - [Liver Tumor Segmentation Challenge (LiTS)](https://competitions.codalab.org/competitions/17094#learn_the_details)
- - [Kidney and Kidney Tumor Segmentation (KiTS)](https://kits21.kits-challenge.org/participate#download-block)
- - [Liver segmentation (3D-IRCADb)](https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/)
- - [WORD: A large scale dataset, benchmark and clinical applicable study for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD)
- - [AbdomenCT-1K](https://github.com/JunMa11/AbdomenCT-1K)
- - [Multi-Modality Abdominal Multi-Organ Segmentation Challenge (AMOS)](https://amos22.grand-challenge.org)
- - [Decathlon (Liver, Lung, Pancreas, HepaticVessel, Spleen, Colon](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2)
- - [CT volumes with multiple organ segmentations (CT-ORG)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080890)
+ - [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789) [CT]
+ - [Pancreas-CT TCIA](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) [CT]
+ - [Combined Healthy Abdominal Organ Segmentation (CHAOS)](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/) [CT/MRI]
+ - [Liver Tumor Segmentation Challenge (LiTS)](https://competitions.codalab.org/competitions/17094#learn_the_details) [CT]
+ - [Kidney and Kidney Tumor Segmentation (KiTS)](https://kits21.kits-challenge.org/participate#download-block) [CT]
+ - [Liver segmentation (3D-IRCADb)](https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/) [CT]
+ - [WORD: A large scale dataset, benchmark and clinical applicable study for abdominal organ segmentation from CT image](https://github.com/HiLab-git/WORD) [CT]
+ - [AbdomenCT-1K](https://github.com/JunMa11/AbdomenCT-1K) [CT]
+ - [Multi-Modality Abdominal Multi-Organ Segmentation Challenge (AMOS)](https://amos22.grand-challenge.org) [CT/MRI]
+ - [Decathlon (Liver, Lung, Pancreas, HepaticVessel, Spleen, Colon](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2) [CT]
+ - [CT volumes with multiple organ segmentations (CT-ORG)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080890) [CT]
+ 
 
 ## Vertebrae
- - [Large Scale Vertebrae Segmentation Challenge (VerSe)](https://github.com/anjany/verse)
- - [CTSpine1K](https://github.com/MIRACLE-Center/CTSpine1K) [[Paper](https://arxiv.org/abs/2105.14711)]
+ - [Large Scale Vertebrae Segmentation Challenge (VerSe)](https://github.com/anjany/verse) [CT]
+ - [CTSpine1K](https://github.com/MIRACLE-Center/CTSpine1K) [[Paper](https://arxiv.org/abs/2105.14711)] [CT]
+ 
+## Total Body
+ - [Totalsegmentator](https://zenodo.org/record/6802614) [CT]
+ 
 
 
