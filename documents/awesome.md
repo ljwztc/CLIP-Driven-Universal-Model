@@ -83,6 +83,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
 
+**MONAI: An open-source framework for deep learning in healthcare** \
+*M. Jorge Cardoso, Wenqi Li, Richard Brown, Nic Ma, Eric Kerfoot, Yiheng Wang, Benjamin Murrey, Andriy Myronenko, Can Zhao, Dong Yang, Vishwesh Nath, Yufan He, Ziyue Xu, Ali Hatamizadeh, Andriy Myronenko, Wentao Zhu, Yun Liu, Mingxin Zheng, Yucheng Tang, Isaac Yang, Michael Zephyr, Behrooz Hashemian, Sachidanand Alle, Mohammad Zalbagi Darestani, Charlie Budd, Marc Modat, Tom Vercauteren, Guotai Wang, Yiwen Li, Yipeng Hu, Yunguan Fu, Benjamin Gorman, Hans Johnson, Brad Genereaux, Barbaros S. Erdal, Vikash Gupta, Andres Diaz-Pinto, Andre Dourson, Lena Maier-Hein, Paul F. Jaeger, Michael Baumgartner, Jayashree Kalpathy-Cramer, Mona Flores, Justin Kirby, Lee A.D. Cooper, Holger R. Roth, Daguang Xu, David Bericat, Ralf Floca, S. Kevin Zhou, Haris Shuaib, Keyvan Farahani, Klaus H. Maier-Hein, Stephen Aylward, Prerna Dogra, Sebastien Ourselin, Andrew Feng* \
+[Nov. 04, 2022] [arXiv, 2022] \
+[[Paper](https://arxiv.org/abs/2211.02701)] [[Code](https://github.com/Project-MONAI)]
+
 
 
 ## Prompt Learning
