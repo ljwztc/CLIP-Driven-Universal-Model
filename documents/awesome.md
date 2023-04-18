@@ -78,20 +78,18 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 13, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)]
 
-**UniverSeg: Universal Medical Image Segmentation** \
-*Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
-[Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
 
-
-
-## Prompt Learning
+## In-Context Learning
 
 **Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
 *Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
 [Fed. 07, 2023] [ICLR, 2023] \
 [[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
 
+**UniverSeg: Universal Medical Image Segmentation** \
+*Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
 
 ## Few-shot Learning
 
