@@ -25,7 +25,7 @@ Some segmentation datasets and models designed for a large number of structures 
 - [Papers](#papers)
   - [Perspectives](#perspectives)
   - [Segmentation](#segmentation)
-  - [Prompt Learning](#prompt-learning)
+  - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
   - [Zero-shot Learning](#zero-shot-learning)
   - [Continual Learning](#continual-learning)
