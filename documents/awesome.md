@@ -3,7 +3,10 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 
 Curated list of asesome medical universal models (UMs), or fundation models, 
+
+
 Universal model aims to 
+
 
 This is an active repository and your contributions are always welcome! Feel free to star and fork!
 
@@ -12,14 +15,27 @@ This is an active repository and your contributions are always welcome! Feel fre
 - [Contents](#contents)
 - [Papers](#papers)
   - [Segmentation](#segmentation)
-  - [Downstream Task](#downstream-task)
-    -[Few shot learning](#few-shot-learning)
+  - [Few-shot learning](#few-shot-learning)
+  - [Zero-shot learning](#zero-shot-learning)
+  - [Continue learning](#continue-learning)
 - [Datasets](#datasets)
-  - [CT](#ct)
-  - [MRI](#mri)
+  - [Abdomen](#abdomen)
+  - [Vertebrae](#vertebrae)
 
 
 # Papers
+
+## Perspective
+
+**Foundation models for generalist medical artificial intelligence** \
+*PMichael Moor, Oishi Banerjee, Zahra Shakeri Hossein Abad, Harlan M. Krumholz, Jure Leskovec, Eric J. Topol, Pranav Rajpurkar* \
+[Apr. 12, 2023] [Nature, 2023] \
+[[Paper](https://www.nature.com/articles/s41586-023-05881-4)] 
+
+**Foundation Models in Healthcare: Opportunities, Biases and Regulatory Prospects in Europe** \
+*Malwina Anna Wójcik* \
+[Jul. 29, 2022] [EGOVIS, 2022] \
+[[Paper](https://link.springer.com/chapter/10.1007/978-3-031-12673-4_3#Sec7)] 
 
 ## Segmentation
 
@@ -53,19 +69,39 @@ This is an active repository and your contributions are always welcome! Feel fre
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
 
+## Prompt Learning
 
+**Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
+*Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
+[Fed. 07, 2023] [ICLR, 2023] \
+[[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
 
-
-
-
-
-## Downstream Task
-### Few shot learning
+## Few-shot Learning
 
 **Transductive few-shot adapters for medical image segmentation** \
 *Julio Silva-Rodríguez, Jose Dolz, Ismail Ben Ayed* \
 [Mar. 29, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)]
+
+## Zero-shot Learning
+
+**SAM.MD: Zero-shot medical image segmentation capabilities of the Segment Anything Model** \
+*Saikat Roy, Tassilo Wald, Gregor Koehler, Maximilian R. Rokuss, Nico Disch, Julius Holzschuh, David Zimmerer, Klaus H. Maier-Hein* \
+[Apr. 10, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.05396)]
+
+**SAMM (Segment Any Medical Model): A 3D Slicer Integration to SAM** \
+*Yihao Liu, Jiaming Zhang, Zhangcong She, Amir Kheradmand, Mehran Armand* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
+
+## Continue Learning
+
+**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
+*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2303.06580)]
+
 
 # Datasets
 ## Abdomen
@@ -84,7 +120,5 @@ This is an active repository and your contributions are always welcome! Feel fre
 ## Vertebrae
  - [Large Scale Vertebrae Segmentation Challenge (VerSe)](https://github.com/anjany/verse)
  - [CTSpine1K](https://github.com/MIRACLE-Center/CTSpine1K) [[Paper](https://arxiv.org/abs/2105.14711)]
- 
-## 
 
-## MRI
+
