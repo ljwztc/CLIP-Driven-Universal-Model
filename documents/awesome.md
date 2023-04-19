@@ -28,7 +28,7 @@ Some segmentation datasets and models designed for a large number of structures 
   - [Prompt Learning](#prompt-learning)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
-  - [Zero-shot Learning](#zero-shot-learning)
+  - [Segment Anything Model (SAM) related](#Segment-Anything-Model-SAM-related)
   - [Continual Learning](#continual-learning)
   - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
@@ -102,7 +102,7 @@ Some segmentation datasets and models designed for a large number of structures 
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)]
 
 
-## Zero-shot Learning
+## Segment Anything Model (SAM) related
 
 **SAM.MD: Zero-shot medical image segmentation capabilities of the Segment Anything Model** \
 *Saikat Roy, Tassilo Wald, Gregor Koehler, Maximilian R. Rokuss, Nico Disch, Julius Holzschuh, David Zimmerer, Klaus H. Maier-Hein* \
@@ -113,6 +113,11 @@ Some segmentation datasets and models designed for a large number of structures 
 *Yihao Liu, Jiaming Zhang, Zhangcong She, Amir Kheradmand, Mehran Armand* \
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
+
+**When SAM Meets Medical Images: An Investigation of Segment Anything Model (SAM) on Multi-phase Liver Tumor Segmentation** \
+*Chuanfei Hu, Xinde Li* \
+[Apr. 17, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.08506)]
 
 
 ## Continual Learning
