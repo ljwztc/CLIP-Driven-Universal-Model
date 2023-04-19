@@ -1,11 +1,11 @@
 ## FAQ
 
 - [FAQ](#faq)
-  - [How to process noisy label problem in CT dataset?](#how-to-process-noisy-label-problem-in-ct-dataset)
-  - [How to train new dataset with new organ?](#how-expand-to-new-dataset-with-new-organ)
-  - [How to generate specific prediction for different dataset?](#how-to-generate-specific-prediction-for-different-dataset)
-  - [How to inference pseudo label without postlabel?](#How-to-inference-pseudo-label-without-postlabel)
-  - [How to customize CLIP embedding for your own dataset?](#how-to-customize-CLIP-embedding-for-your-own-dataset)
+- [How to process noisy label problem in CT dataset?](#how-to-process-noisy-label-problem-in-ct-dataset)
+- [How to train new dataset with new organ?](#how-to-train-new-dataset-with-new-organ)
+- [How to generate specific prediction for different dataset?](#how-to-generate-specific-prediction-for-different-dataset)
+- [How to inference pseudo label without postlabel?](#how-to-inference-pseudo-label-without-postlabel)
+- [How to customize CLIP embedding for your own dataset?](#how-to-customize-clip-embedding-for-your-own-dataset)
 
  
  ## How to process noisy label problem in CT dataset?
@@ -59,7 +59,7 @@ In some datasets, the annotation only includes organs and does not include tumor
 
  ## How to generate specific prediction for different dataset?
 1. Ensure that the dataset is properly loaded and preprocessed so that it can be used by the model.  
-2. Use `MERGE_MAPPING_v1` in `utils/utils.py` to control the label mapping from universal model to spcific dataset.  
+2. Use `MERGE_MAPPING_v1` in `utils/utils.py` to control the label mapping from universal model to specific dataset.  
 3. In the tuple, the first item is the index of the label in the universal model's template, and the second item is the index of the label in the specific dataset. For example, if the label for "liver" is indexed as 1 and the label for "liver tumor" is indexed as 2 in the LiTS dataset, the mapping tuple would be `(6,1), (27,2)`.  
 4. Finally, you may want to post-process the final results as needed, as per your specific requirements.
 
