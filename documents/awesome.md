@@ -20,7 +20,7 @@ Some segmentation datasets and models designed for a large number of structures 
 😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **[issues](https://github.com/ljwztc/CLIP-Driven-Universal-Model/issues/10)** for related**work and dataset!** Don't forget to star and fork!
 
 # Contents
-- [awesome-medical-universal-model](#awesome-medical-universal-model)
+- [awesome-medical-universal-model ](#awesome-medical-universal-model-)
 - [Contents](#contents)
 - [Papers](#papers)
   - [Perspectives](#perspectives)
@@ -28,7 +28,7 @@ Some segmentation datasets and models designed for a large number of structures 
   - [Prompt Learning](#prompt-learning)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
-  - [Segment Anything Model (SAM) related](#Segment-Anything-Model-SAM-related)
+  - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
   - [Continual Learning](#continual-learning)
   - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
@@ -87,6 +87,10 @@ Some segmentation datasets and models designed for a large number of structures 
 [Fed. 07, 2023] [ICLR, 2023] \
 [[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
 
+**Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
+*Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
+[Feb. 08, 2023] [arXiv, 2023]
+[[Paper](https://arxiv.org/abs/2302.08958)]
 ## In-Context Learning
 
 **UniverSeg: Universal Medical Image Segmentation** \
