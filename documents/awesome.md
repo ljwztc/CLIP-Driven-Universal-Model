@@ -25,10 +25,12 @@ Some segmentation datasets and models designed for a large number of structures 
 - [Papers](#papers)
   - [Perspectives](#perspectives)
   - [Segmentation](#segmentation)
+  - [Prompt Learning](#prompt-learning)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
   - [Zero-shot Learning](#zero-shot-learning)
   - [Continual Learning](#continual-learning)
+  - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
   - [Vertebrae](#vertebrae)
@@ -78,13 +80,14 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 13, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)]
 
-
-## In-Context Learning
+## Prompt Learning
 
 **Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
 *Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
 [Fed. 07, 2023] [ICLR, 2023] \
 [[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
+
+## In-Context Learning
 
 **UniverSeg: Universal Medical Image Segmentation** \
 *Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
@@ -119,6 +122,12 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2303.06580)]
 
+## Learning Utility
+
+**MONAI: An open-source framework for deep learning in healthcare** \
+*M. Jorge Cardoso, Wenqi Li, Richard Brown, Nic Ma, Eric Kerfoot, Yiheng Wang, Benjamin Murrey, Andriy Myronenko, Can Zhao, Dong Yang, Vishwesh Nath, Yufan He, Ziyue Xu, Ali Hatamizadeh, Andriy Myronenko, Wentao Zhu, Yun Liu, Mingxin Zheng, Yucheng Tang, Isaac Yang, Michael Zephyr, Behrooz Hashemian, Sachidanand Alle, Mohammad Zalbagi Darestani, Charlie Budd, Marc Modat, Tom Vercauteren, Guotai Wang, Yiwen Li, Yipeng Hu, Yunguan Fu, Benjamin Gorman, Hans Johnson, Brad Genereaux, Barbaros S. Erdal, Vikash Gupta, Andres Diaz-Pinto, Andre Dourson, Lena Maier-Hein, Paul F. Jaeger, Michael Baumgartner, Jayashree Kalpathy-Cramer, Mona Flores, Justin Kirby, Lee A.D. Cooper, Holger R. Roth, Daguang Xu, David Bericat, Ralf Floca, S. Kevin Zhou, Haris Shuaib, Keyvan Farahani, Klaus H. Maier-Hein, Stephen Aylward, Prerna Dogra, Sebastien Ourselin, Andrew Feng* \
+[Nov. 04, 2022] [arXiv, 2022] \
+[[Paper](https://arxiv.org/abs/2211.02701)] [[Code](https://github.com/Project-MONAI)]
 
 # Datasets
 ## Abdomen
