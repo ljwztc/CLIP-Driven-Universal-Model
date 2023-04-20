@@ -89,7 +89,7 @@ Some segmentation datasets and models designed for a large number of structures 
 
 **Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
 *Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
-[Feb. 08, 2023] [arXiv, 2023]
+[Feb. 08, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2302.08958)]
 
 ## In-Context Learning
