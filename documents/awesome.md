@@ -124,6 +124,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 17, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.08506)]
 
+**Accuracy of Segment-Anything Model (SAM) in medical image segmentation tasks** \
+*Sheng He, Rina Bao, Jingpeng Li, P. Ellen Grant, Yangming Ou* \
+[Apr. 18, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.09324)]
+
 
 ## Continual Learning
 
