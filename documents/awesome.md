@@ -28,8 +28,8 @@ Some segmentation datasets and models designed for a large number of structures 
   - [Prompt Learning](#prompt-learning)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
-  - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
   - [Continual Learning](#continual-learning)
+  - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
   - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
@@ -106,8 +106,19 @@ Some segmentation datasets and models designed for a large number of structures 
 [Mar. 29, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)]
 
+## Continual Learning
+
+**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
+*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2303.06580)]
 
 ## Segment Anything Model (SAM) related
+
+**Segment Anything Model (SAM) for Digital Pathology: Assess Zero-shot Segmentation on Whole Slide Imaging** \
+* Ruining Deng, Can Cui, Quan Liu, Tianyuan Yao, Lucas W. Remedios, Shunxing Bao, Bennett A. Landman, Lee E. Wheless, Lori A. Coburn, Keith T. Wilson, Yaohong Wang, Shilin Zhao, Agnes B. Fogo, Haichun Yang, Yucheng Tang, Yuankai Huo* \
+[Apr. 9, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.04155)]
 
 **SAM.MD: Zero-shot medical image segmentation capabilities of the Segment Anything Model** \
 *Saikat Roy, Tassilo Wald, Gregor Koehler, Maximilian R. Rokuss, Nico Disch, Julius Holzschuh, David Zimmerer, Klaus H. Maier-Hein* \
@@ -119,6 +130,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
 
+**Can SAM Segment Polyps?** \
+*Tao Zhou, Yizhe Zhang, Yi Zhou, Ye Wu, Chen Gong* \
+[Apr. 15, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.07583)]
+
 **When SAM Meets Medical Images: An Investigation of Segment Anything Model (SAM) on Multi-phase Liver Tumor Segmentation** \
 *Chuanfei Hu, Xinde Li* \
 [Apr. 17, 2023] [arXiv, 2023] \
@@ -129,13 +145,10 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 18, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.09324)]
 
-
-## Continual Learning
-
-**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
-*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
-[Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2303.06580)]
+**Segment Anything Model for Medical Image Analysis: an Experimental Study** \
+*Maciej A. Mazurowski, Haoyu Dong, Hanxue Gu, Jichen Yang, Nicholas Konz, Yixin Zhang* \
+[Apr. 20, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.10517)]
 
 ## Learning Utility
 
