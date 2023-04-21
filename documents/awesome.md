@@ -116,7 +116,7 @@ Some segmentation datasets and models designed for a large number of structures 
 ## Segment Anything Model (SAM) related
 
 **Segment Anything Model (SAM) for Digital Pathology: Assess Zero-shot Segmentation on Whole Slide Imaging** \
-* Ruining Deng, Can Cui, Quan Liu, Tianyuan Yao, Lucas W. Remedios, Shunxing Bao, Bennett A. Landman, Lee E. Wheless, Lori A. Coburn, Keith T. Wilson, Yaohong Wang, Shilin Zhao, Agnes B. Fogo, Haichun Yang, Yucheng Tang, Yuankai Huo* \
+*Ruining Deng, Can Cui, Quan Liu, Tianyuan Yao, Lucas W. Remedios, Shunxing Bao, Bennett A. Landman, Lee E. Wheless, Lori A. Coburn, Keith T. Wilson, Yaohong Wang, Shilin Zhao, Agnes B. Fogo, Haichun Yang, Yucheng Tang, Yuankai Huo* \
 [Apr. 9, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.04155)]
 
