@@ -135,6 +135,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 15, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.07583)]
 
+**The Segment Anything foundation model achieves favorable brain tumor autosegmentation accuracy on MRI to support radiotherapy treatment planning** \
+*Florian Putz, Johanna Grigo, Thomas Weissmann, Philipp Schubert, Daniel Hoefler, Ahmed Gomaa, Hassen Ben Tkhayat, Amr Hagag, Sebastian Lettmaier, Benjamin Frey, Udo S. Gaipl, Luitpold V. Distel, Sabine Semrau, Christoph Bert, Rainer Fietkau, Yixing Huang* \
+[Apr. 16, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.07875)]
+
 **When SAM Meets Medical Images: An Investigation of Segment Anything Model (SAM) on Multi-phase Liver Tumor Segmentation** \
 *Chuanfei Hu, Xinde Li* \
 [Apr. 17, 2023] [arXiv, 2023] \
