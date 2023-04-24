@@ -63,7 +63,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
 [Jan. 02, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [GitHub stars](https://img.shields.io/github/stars/ljwztc/CLIP-Driven-Universal-Model.svg?logo=github&label=Stars)](https://github.com/ljwztc/CLIP-Driven-Universal-Model)
+[[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [![GitHub stars](https://img.shields.io/github/stars/ljwztc/CLIP-Driven-Universal-Model.svg?logo=github&label=Stars)](https://github.com/ljwztc/CLIP-Driven-Universal-Model)
 
 **MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation** \
 *Constantin Ulrich, Fabian Isensee, Tassilo Wald, Maximilian Zenk, Michael Baumgartner, Klaus H. Maier-Hein* \
@@ -73,19 +73,19 @@ Some segmentation datasets and models designed for a large number of structures 
 **UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner** \
 *Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Yong Xia* \
 [Apr. 07, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)] [GitHub stars](https://img.shields.io/github/stars/yeerwen/UniSeg.svg?logo=github&label=Stars)](https://github.com/yeerwen/UniSeg)
+[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)] [![GitHub stars](https://img.shields.io/github/stars/yeerwen/UniSeg.svg?logo=github&label=Stars)](https://github.com/yeerwen/UniSeg)
 
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
 *Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao* \
 [Apr. 13, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
+[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
 
 ## Prompt Learning
 
 **Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
 *Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
 [Fed. 07, 2023] [ICLR, 2023] \
-[[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)] [GitHub stars](https://img.shields.io/github/stars/MembrLab/MIU-VL.svg?logo=github&label=Stars)](https://github.com/MembrLab/MIU-VL)
+[[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)] [![GitHub stars](https://img.shields.io/github/stars/MembrLab/MIU-VL.svg?logo=github&label=Stars)](https://github.com/MembrLab/MIU-VL)
 
 **Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
 *Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
@@ -97,14 +97,14 @@ Some segmentation datasets and models designed for a large number of structures 
 **UniverSeg: Universal Medical Image Segmentation** \
 *Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
 [Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)] [GitHub stars](https://img.shields.io/github/stars/JJGO/UniverSeg.svg?logo=github&label=Stars)](https://github.com/JJGO/UniverSeg)
+[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)] [![GitHub stars](https://img.shields.io/github/stars/JJGO/UniverSeg.svg?logo=github&label=Stars)](https://github.com/JJGO/UniverSeg)
 
 ## Few-shot Learning
 
 **Transductive few-shot adapters for medical image segmentation** \
 *Julio Silva-Rodríguez, Jose Dolz, Ismail Ben Ayed* \
 [Mar. 29, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)] [GitHub stars](https://img.shields.io/github/stars/jusiro/fewshot-finetuning.svg?logo=github&label=Stars)](https://github.com/jusiro/fewshot-finetuning)
+[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)] [![GitHub stars](https://img.shields.io/github/stars/jusiro/fewshot-finetuning.svg?logo=github&label=Stars)](https://github.com/jusiro/fewshot-finetuning)
 
 ## Continual Learning
 
@@ -128,7 +128,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **SAMM (Segment Any Medical Model): A 3D Slicer Integration to SAM** \
 *Yihao Liu, Jiaming Zhang, Zhangcong She, Amir Kheradmand, Mehran Armand* \
 [Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)] [GitHub stars](https://img.shields.io/github/stars/bingogome/samm.svg?logo=github&label=Stars)](https://github.com/bingogome/samm)
+[[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)] [![GitHub stars](https://img.shields.io/github/stars/bingogome/samm.svg?logo=github&label=Stars)](https://github.com/bingogome/samm)
 
 **Can SAM Segment Polyps?** \
 *Tao Zhou, Yizhe Zhang, Yi Zhou, Ye Wu, Chen Gong* \
