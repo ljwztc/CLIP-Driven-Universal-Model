@@ -163,7 +163,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **Segment Anything in Medical Images** \
 *Jun Ma, Bo Wang* \
 [Apr. 24, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.10517)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bingogome/samm.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+[[Paper](https://arxiv.org/abs/2304.10517)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
 
 ## Learning Utility
 
