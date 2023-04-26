@@ -20,12 +20,12 @@ Some segmentation datasets and models designed for a large number of structures 
 😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **[issues](https://github.com/ljwztc/CLIP-Driven-Universal-Model/issues/10)** for related**work and dataset!** Don't forget to star and fork!
 
 # Contents
-- [awesome-medical-universal-model ](#awesome-medical-universal-model-)
+- [awesome-medical-universal-model](#awesome-medical-universal-model)
 - [Contents](#contents)
 - [Papers](#papers)
   - [Perspectives](#perspectives)
   - [Segmentation](#segmentation)
-  - [Prompt Learning](#prompt-learning)
+  - [Parameter-efficient Fine Tuning](#parameter-efficient-fine-tuning)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
   - [Continual Learning](#continual-learning)
@@ -80,12 +80,33 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 13, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
 
-## Prompt Learning
+## Parameter-efficient Fine Tuning
 
 **Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
 *Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
 [Fed. 07, 2023] [ICLR, 2023] \
 [[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)] [![GitHub stars](https://img.shields.io/github/stars/MembrLab/MIU-VL.svg?logo=github&label=Stars)](https://github.com/MembrLab/MIU-VL)
+
+**Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
+*Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
+[Feb. 08, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2302.08958)]
+
+**Segment Anything in Medical Images** \
+*Jun Ma, Bo Wang* \
+[Apr. 24, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12306)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+
+**Medical SAM Adapter: Adapting Segment Anything Model for Medical Image Segmentation** \
+*Junde Wu, Rao Fu, Huihui Fang, Yuanpei Liu, Zhaowei Wang, Yanwu Xu, Yueming Jin, Tal Arbel* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12620)] [[Code](https://github.com/WuJunde/Medical-SAM-Adapter)] [![GitHub stars](https://img.shields.io/github/stars/WuJunde/Medical-SAM-Adapter.svg?logo=github&label=Stars)](https://github.com/WuJunde/Medical-SAM-Adapter)
+
+**Med-Tuning: Exploring Parameter-Efficient Transfer Learning for Medical Volumetric Segmentation** \
+*Wenxuan Wang, Jiachen Shen, Chen Chen, Jianbo Jiao, Yan Zhang, Shanshan Song, Jiangyun Li* \
+[Apr. 21, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.10880)]
+
 
 **Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
 *Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
@@ -163,7 +184,18 @@ Some segmentation datasets and models designed for a large number of structures 
 **Segment Anything in Medical Images** \
 *Jun Ma, Bo Wang* \
 [Apr. 24, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.10517)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+[[Paper](https://arxiv.org/abs/2304.12306)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+
+**Medical SAM Adapter: Adapting Segment Anything Model for Medical Image Segmentation** \
+*Junde Wu, Rao Fu, Huihui Fang, Yuanpei Liu, Zhaowei Wang, Yanwu Xu, Yueming Jin, Tal Arbel* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12620)] [[Code](https://github.com/WuJunde/Medical-SAM-Adapter)] [![GitHub stars](https://img.shields.io/github/stars/WuJunde/Medical-SAM-Adapter.svg?logo=github&label=Stars)](https://github.com/WuJunde/Medical-SAM-Adapter)
+
+**Generalist Vision Foundation Models for Medical Imaging: A Case Study of Segment Anything Model on Zero-Shot Medical Segmentation** \
+*Peilun Shi, Jianing Qiu, Sai Mu Dalike Abaxi, Hao Wei, Frank P.-W. Lo, Wu Yuan* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12637)]
+
 
 ## Learning Utility
 
