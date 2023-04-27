@@ -107,11 +107,10 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 21, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.10880)]
 
-
-**Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
-*Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
-[Feb. 08, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2302.08958)]
+**Learnable Ophthalmology SAM** \
+*Zhongxi Qiu, Yan Hu, Heng Li, Jiang Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13425)] [[Code](https://github.com/Qsingle/LearnablePromptSAM)] [![GitHub stars](https://img.shields.io/github/stars/Qsingle/LearnablePromptSAM.svg?logo=github&label=Stars)](https://github.com/Qsingle/LearnablePromptSAM)
 
 ## In-Context Learning
 
