@@ -112,6 +112,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 26, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.13425)] [[Code](https://github.com/Qsingle/LearnablePromptSAM)] [![GitHub stars](https://img.shields.io/github/stars/Qsingle/LearnablePromptSAM.svg?logo=github&label=Stars)](https://github.com/Qsingle/LearnablePromptSAM)
 
+**Customized Segment Anything Model for Medical Image Segmentation** \
+*Kaidong Zhang, Dong Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13785)] [[Code](https://github.com/hitachinsk/SAMed)] [![GitHub stars](https://img.shields.io/github/stars/hitachinsk/SAMed.svg?logo=github&label=Stars)](https://github.com/hitachinsk/SAMed)
+
 ## In-Context Learning
 
 **UniverSeg: Universal Medical Image Segmentation** \
@@ -194,6 +199,16 @@ Some segmentation datasets and models designed for a large number of structures 
 *Peilun Shi, Jianing Qiu, Sai Mu Dalike Abaxi, Hao Wei, Frank P.-W. Lo, Wu Yuan* \
 [Apr. 25, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.12637)]
+
+**GazeSAM: What You See is What You Segment** \
+*Bin Wang, Armstrong Aboah, Zheyuan Zhang, Ulas Bagci* \
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13844)] [[Code](https://github.com/ukaukaaaa/GazeSAM)] [![GitHub stars](https://img.shields.io/github/stars/ukaukaaaa/GazeSAM.svg?logo=github&label=Stars)](https://github.com/ukaukaaaa/GazeSAM)
+
+**SkinSAM: Empowering Skin Cancer Segmentation with Segment Anything Model** \
+*Mingzhe Hu, Yuheng Li, Xiaofeng Yang* \
+[Apr. 27, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13973)]
 
 
 ## Learning Utility
