@@ -210,6 +210,16 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 27, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.13973)]
 
+**SAM Meets Robotic Surgery: An Empirical Study in Robustness Perspective** \
+*An Wang, Mobarakol Islam, Mengya Xu, Yang Zhang, Hongliang Ren* \
+[Apr. 27, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.14674)]
+
+**Segment Anything Model for Medical Images?** \
+*Yuhao Huang, Xin Yang, Lian Liu, Han Zhou, Ao Chang, Xinrui Zhou, Rusi Chen, Junxuan Yu, Jiongquan Chen, Chaoyu Chen, Haozhe Chi, Xindi Hu, Deng-Ping Fan, Fajin Dong, Dong Ni* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.14660)] 👍
+
 
 ## Learning Utility
 
