@@ -220,6 +220,21 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 28, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.14660)] 👍
 
+**Exploring the Zero-Shot Capabilities of the Segment Anything Model (SAM) in 2D Medical Imaging: A Comprehensive Evaluation and Practical Guideline** \
+*Christian Mattjie, Luis Vinicius de Moura, Rafaela Cappelari Ravazio, Lucas Silveira Kupssinskü, Otávio Parraga, Marcelo Mussi Delucis, Rodrigo Coelho Barros* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00109)]
+
+**SAM on Medical Images: A Comprehensive Study on Three Prompt Modes** \
+*Dongjie Cheng, Ziyuan Qin, Zekun Jiang, Shaoting Zhang, Qicheng Lao, Kang Li* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00035)]
+
+**Polyp-SAM: Transfer SAM for Polyp Segmentation** \
+*Yuheng Li, Mingzhe Hu, Xiaofeng Yang* \
+[Apr. 29, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00293)] [[Code](https://github.com/ricklisz/Polyp-SAM)] [![GitHub stars](https://img.shields.io/github/stars/ricklisz/Polyp-SAM.svg?logo=github&label=Stars)](https://github.com/ricklisz/Polyp-SAM)
+
 
 ## Learning Utility
 
