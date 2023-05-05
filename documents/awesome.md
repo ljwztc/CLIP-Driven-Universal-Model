@@ -183,7 +183,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **Input Augmentation with SAM: Boosting Medical Image Segmentation with Segmentation Foundation Model** \
 *Yizhe Zhang, Tao Zhou, Peixian Liang, Danny Z. Chen* \
 [Apr. 22, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.11332)]
+[[Paper](https://arxiv.org/abs/2304.11332)] [[Code](https://github.com/yizhezhang2000/SAMAug)] [![GitHub stars](https://img.shields.io/github/stars/yizhezhang2000/SAMAug.svg?logo=github&label=Stars)](https://github.com/yizhezhang2000/SAMAug)
 
 **Segment Anything in Medical Images** \
 *Jun Ma, Bo Wang* \
