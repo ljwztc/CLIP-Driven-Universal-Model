@@ -24,12 +24,14 @@ Some segmentation datasets and models designed for a large number of structures 
 - [Contents](#contents)
 - [Papers](#papers)
   - [Perspectives](#perspectives)
-  - [Segmentation](#segmentation)
-  - [Parameter-efficient Fine Tuning](#parameter-efficient-fine-tuning)
+  - [Vision](#vision)
+  - [NLP](#nlp)
+  - [Multi-modality](#multi-modality)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
   - [Continual Learning](#continual-learning)
   - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
+  - [Parameter-efficient Fine Tuning](#parameter-efficient-fine-tuning)
   - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
@@ -46,14 +48,18 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [Nature, 2023] \
 [[Paper](https://www.nature.com/articles/s41586-023-05881-4)] 
 
+**Toward Foundational Deep Learning Models for Medical Imaging in the New Era of Transformer Networks** \
+*Martin J. Willemink, Holger R. Roth, Veit Sandfort* \
+[Nov. 2, 2022] [Radiology: Artificial Intelligence, 2022] \
+[[Paper](https://pubs.rsna.org/doi/10.1148/ryai.210284)] 
+
 **Foundation Models in Healthcare: Opportunities, Biases and Regulatory Prospects in Europe** \
 *Malwina Anna Wójcik* \
 [Jul. 29, 2022] [EGOVIS, 2022] \
 [[Paper](https://link.springer.com/chapter/10.1007/978-3-031-12673-4_3#Sec7)] 
 
 
-
-## Segmentation
+## Vision
 
 **Universal Segmentation of 33 Anatomies** \
 *Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
@@ -79,6 +85,45 @@ Some segmentation datasets and models designed for a large number of structures 
 *Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao* \
 [Apr. 13, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
+
+
+## NLP
+
+**Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction** \
+*Laila Rasmy, Yang Xiang, Ziqian Xie, Cui Tao & Degui Zhi* \
+[May 20, 2021] [npj digital medicine , 2021] \
+[[Paper](https://www.nature.com/articles/s41746-021-00455-y)]
+
+
+## Multi-modality
+
+**MedCLIP: Contrastive Learning from Unpaired Medical Images and Text** \
+*Zifeng Wang, Zhenbang Wu, Dinesh Agarwal, Jimeng Sun* \
+[Oct. 18, 2022] [EMNLP, 2022] \
+[[Paper](https://arxiv.org/abs/2210.10163)] [[Code](https://github.com/RyanWangZf/MedCLIP)] [![GitHub stars](https://img.shields.io/github/stars/RyanWangZf/MedCLIP.svg?logo=github&label=Stars)](https://github.com/RyanWangZf/MedCLIP)
+
+
+## In-Context Learning
+
+**UniverSeg: Universal Medical Image Segmentation** \
+*Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)] [![GitHub stars](https://img.shields.io/github/stars/JJGO/UniverSeg.svg?logo=github&label=Stars)](https://github.com/JJGO/UniverSeg)
+
+## Few-shot Learning
+
+**Transductive few-shot adapters for medical image segmentation** \
+*Julio Silva-Rodríguez, Jose Dolz, Ismail Ben Ayed* \
+[Mar. 29, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)] [![GitHub stars](https://img.shields.io/github/stars/jusiro/fewshot-finetuning.svg?logo=github&label=Stars)](https://github.com/jusiro/fewshot-finetuning)
+
+## Continual Learning
+
+**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
+*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2303.06580)]
+
 
 ## Parameter-efficient Fine Tuning
 
@@ -116,27 +161,6 @@ Some segmentation datasets and models designed for a large number of structures 
 *Kaidong Zhang, Dong Liu*\
 [Apr. 26, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.13785)] [[Code](https://github.com/hitachinsk/SAMed)] [![GitHub stars](https://img.shields.io/github/stars/hitachinsk/SAMed.svg?logo=github&label=Stars)](https://github.com/hitachinsk/SAMed)
-
-## In-Context Learning
-
-**UniverSeg: Universal Medical Image Segmentation** \
-*Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
-[Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)] [![GitHub stars](https://img.shields.io/github/stars/JJGO/UniverSeg.svg?logo=github&label=Stars)](https://github.com/JJGO/UniverSeg)
-
-## Few-shot Learning
-
-**Transductive few-shot adapters for medical image segmentation** \
-*Julio Silva-Rodríguez, Jose Dolz, Ismail Ben Ayed* \
-[Mar. 29, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)] [![GitHub stars](https://img.shields.io/github/stars/jusiro/fewshot-finetuning.svg?logo=github&label=Stars)](https://github.com/jusiro/fewshot-finetuning)
-
-## Continual Learning
-
-**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
-*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
-[Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2303.06580)]
 
 ## Segment Anything Model (SAM) related
 
