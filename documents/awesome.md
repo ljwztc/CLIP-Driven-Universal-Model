@@ -169,6 +169,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 9, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.04155)]
 
+**SAM vs BET: A Comparative Study for Brain Extraction and Segmentation of Magnetic Resonance Images using Deep Learning** \
+*Sovesh Mohapatra, Advait Gosai, Gottfried Schlaug* \
+[Apr. 10, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.04738)]
+
 **SAM.MD: Zero-shot medical image segmentation capabilities of the Segment Anything Model** \
 *Saikat Roy, Tassilo Wald, Gregor Koehler, Maximilian R. Rokuss, Nico Disch, Julius Holzschuh, David Zimmerer, Klaus H. Maier-Hein* \
 [Apr. 10, 2023] [arXiv, 2023] \
@@ -229,6 +234,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 26, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.13844)] [[Code](https://github.com/ukaukaaaa/GazeSAM)] [![GitHub stars](https://img.shields.io/github/stars/ukaukaaaa/GazeSAM.svg?logo=github&label=Stars)](https://github.com/ukaukaaaa/GazeSAM)
 
+**Customized Segment Anything Model for Medical Image Segmentation** \
+*Kaidong Zhang, Dong Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13785)] [[Code](https://github.com/hitachinsk/SAMed)] [![GitHub stars](https://img.shields.io/github/stars/hitachinsk/SAMed.svg?logo=github&label=Stars)](https://github.com/hitachinsk/SAMed)
+
 **SkinSAM: Empowering Skin Cancer Segmentation with Segment Anything Model** \
 *Mingzhe Hu, Yuheng Li, Xiaofeng Yang* \
 [Apr. 27, 2023] [arXiv, 2023] \
@@ -258,6 +268,11 @@ Some segmentation datasets and models designed for a large number of structures 
 *Yuheng Li, Mingzhe Hu, Xiaofeng Yang* \
 [Apr. 29, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2305.00293)] [[Code](https://github.com/ricklisz/Polyp-SAM)] [![GitHub stars](https://img.shields.io/github/stars/ricklisz/Polyp-SAM.svg?logo=github&label=Stars)](https://github.com/ricklisz/Polyp-SAM)
+
+**How Segment Anything Model (SAM) Boost Medical Image Segmentation?** \
+*Yichi Zhang, Rushi Jiao* \
+[May 05, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.03678)] [[Code](https://github.com/YichiZhang98/SAM4MIS)] [![GitHub stars](https://img.shields.io/github/stars/YichiZhang98/SAM4MIS.svg?logo=github&label=Stars)](https://github.com/YichiZhang98/SAM4MIS)
 
 
 ## Learning Utility
