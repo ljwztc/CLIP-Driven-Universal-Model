@@ -184,6 +184,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)] [![GitHub stars](https://img.shields.io/github/stars/bingogome/samm.svg?logo=github&label=Stars)](https://github.com/bingogome/samm)
 
+**SAM Struggles in Concealed Scenes -- Empirical Study on "Segment Anything"** \
+*Ge-Peng Ji, Deng-Ping Fan, Peng Xu, Ming-Ming Cheng, Bowen Zhou, Luc Van Gool* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.06022)]
+
 **Can SAM Segment Polyps?** \
 *Tao Zhou, Yizhe Zhang, Yi Zhou, Ye Wu, Chen Gong* \
 [Apr. 15, 2023] [arXiv, 2023] \
