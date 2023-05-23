@@ -279,6 +279,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [May 05, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2305.03678)] [[Code](https://github.com/YichiZhang98/SAM4MIS)] [![GitHub stars](https://img.shields.io/github/stars/YichiZhang98/SAM4MIS.svg?logo=github&label=Stars)](https://github.com/YichiZhang98/SAM4MIS)
 
+**BreastSAM: A Study of Segment Anything Model for Breast Tumor Detection in Ultrasound Images** \
+*Mingzhe Hu, Yuheng Li, Xiaofeng Yang* \
+[May 21, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.12447)]
+
 
 ## Learning Utility
 
