@@ -284,6 +284,11 @@ Some segmentation datasets and models designed for a large number of structures 
 [May 21, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2305.12447)]
 
+**DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation** \
+*Yifan Gao, Wei Xia, Dingdu Hu, Xin Gao* \
+[Jun 1, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2306.00499)] [[Code](https://github.com/yifangao112/DeSAM)] [![GitHub stars](https://img.shields.io/github/stars/yifangao112/DeSAM.svg?logo=github&label=Stars)](https://github.com/yifangao112/DeSAM)
+
 
 ## Learning Utility
 
