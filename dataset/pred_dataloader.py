@@ -173,7 +173,7 @@ class Compose_Select(Compose):
 def get_loader(args):
     pred_transforms = Compose(
         [
-            LoadImage(keys=["image"]),
+            LoadImaged(keys=["image"]),
             AddChanneld(keys=["image"]),
             Orientationd(keys=["image"], axcodes="RAS"),
             # ToTemplatelabeld(keys=['label']),

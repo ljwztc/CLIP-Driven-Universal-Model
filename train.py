@@ -123,7 +123,8 @@ def process(args):
                     )
 
     #Load pre-trained weights
-    model.load_params(torch.load(args.pretrain)["state_dict"])
+    if args.pretrain is not None:
+        model.load_params(torch.load(args.pretrain)["state_dict"])
 
     if args.trans_encoding == 'word_embedding':
         word_embedding = torch.load(args.word_embedding)
@@ -212,8 +213,8 @@ def main():
     ## model load
     parser.add_argument('--backbone', default='unet', help='backbone [swinunetr or unet or dints or unetpp]')
     parser.add_argument('--resume', default=None, help='The path resume from checkpoint')
-    parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt',  #swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
-                        help='The path of pretrain model')
+    parser.add_argument('--pretrain', default=None,  #swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
+                        help='The path of pretrain model. Eg, ./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt')
     parser.add_argument('--trans_encoding', default='word_embedding', 
                         help='the type of encoding: rand_embedding or word_embedding')
     parser.add_argument('--word_embedding', default='./pretrained_weights/txt_encoding.pth', 

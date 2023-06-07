@@ -20,16 +20,18 @@ Some segmentation datasets and models designed for a large number of structures 
 😎 This is an active repository and your contributions are always welcome! **Feel free **to submit **[issues](https://github.com/ljwztc/CLIP-Driven-Universal-Model/issues/10)** for related**work and dataset!** Don't forget to star and fork!
 
 # Contents
-- [awesome-medical-universal-model ](#awesome-medical-universal-model-)
+- [awesome-medical-universal-model](#awesome-medical-universal-model)
 - [Contents](#contents)
 - [Papers](#papers)
   - [Perspectives](#perspectives)
-  - [Segmentation](#segmentation)
-  - [Prompt Learning](#prompt-learning)
+  - [Vision](#vision)
+  - [NLP](#nlp)
+  - [Multi-modality](#multi-modality)
   - [In-Context Learning](#in-context-learning)
   - [Few-shot Learning](#few-shot-learning)
-  - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
   - [Continual Learning](#continual-learning)
+  - [Segment Anything Model (SAM) related](#segment-anything-model-sam-related)
+  - [Parameter-efficient Fine Tuning](#parameter-efficient-fine-tuning)
   - [Learning Utility](#learning-utility)
 - [Datasets](#datasets)
   - [Abdomen](#abdomen)
@@ -46,14 +48,18 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 12, 2023] [Nature, 2023] \
 [[Paper](https://www.nature.com/articles/s41586-023-05881-4)] 
 
+**Toward Foundational Deep Learning Models for Medical Imaging in the New Era of Transformer Networks** \
+*Martin J. Willemink, Holger R. Roth, Veit Sandfort* \
+[Nov. 2, 2022] [Radiology: Artificial Intelligence, 2022] \
+[[Paper](https://pubs.rsna.org/doi/10.1148/ryai.210284)] 
+
 **Foundation Models in Healthcare: Opportunities, Biases and Regulatory Prospects in Europe** \
 *Malwina Anna Wójcik* \
 [Jul. 29, 2022] [EGOVIS, 2022] \
 [[Paper](https://link.springer.com/chapter/10.1007/978-3-031-12673-4_3#Sec7)] 
 
 
-
-## Segmentation
+## Vision
 
 **Universal Segmentation of 33 Anatomies** \
 *Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
@@ -63,7 +69,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
 [Jan. 02, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)]
+[[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [![GitHub stars](https://img.shields.io/github/stars/ljwztc/CLIP-Driven-Universal-Model.svg?logo=github&label=Stars)](https://github.com/ljwztc/CLIP-Driven-Universal-Model)
 
 **MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation** \
 *Constantin Ulrich, Fabian Isensee, Tassilo Wald, Maximilian Zenk, Michael Baumgartner, Klaus H. Maier-Hein* \
@@ -73,41 +79,100 @@ Some segmentation datasets and models designed for a large number of structures 
 **UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner** \
 *Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Yong Xia* \
 [Apr. 07, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)]
+[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)] [![GitHub stars](https://img.shields.io/github/stars/yeerwen/UniSeg.svg?logo=github&label=Stars)](https://github.com/yeerwen/UniSeg)
 
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
 *Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao* \
 [Apr. 13, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)]
+[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
 
-## Prompt Learning
 
-**Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
-*Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
-[Fed. 07, 2023] [ICLR, 2023] \
-[[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)]
+## NLP
 
-**Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
-*Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
-[Feb. 08, 2023] [arXiv, 2023]
-[[Paper](https://arxiv.org/abs/2302.08958)]
+**Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction** \
+*Laila Rasmy, Yang Xiang, Ziqian Xie, Cui Tao & Degui Zhi* \
+[May 20, 2021] [npj digital medicine , 2021] \
+[[Paper](https://www.nature.com/articles/s41746-021-00455-y)]
+
+
+## Multi-modality
+
+**MedCLIP: Contrastive Learning from Unpaired Medical Images and Text** \
+*Zifeng Wang, Zhenbang Wu, Dinesh Agarwal, Jimeng Sun* \
+[Oct. 18, 2022] [EMNLP, 2022] \
+[[Paper](https://arxiv.org/abs/2210.10163)] [[Code](https://github.com/RyanWangZf/MedCLIP)] [![GitHub stars](https://img.shields.io/github/stars/RyanWangZf/MedCLIP.svg?logo=github&label=Stars)](https://github.com/RyanWangZf/MedCLIP)
+
 
 ## In-Context Learning
 
 **UniverSeg: Universal Medical Image Segmentation** \
 *Victor Ion Butoi, Jose Javier Gonzalez Ortiz, Tianyu Ma, Mert R. Sabuncu, John Guttag, Adrian V. Dalca* \
 [Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)]
+[[Paper](https://arxiv.org/abs/2304.06131)] [[Code](https://github.com/JJGO/UniverSeg)] [![GitHub stars](https://img.shields.io/github/stars/JJGO/UniverSeg.svg?logo=github&label=Stars)](https://github.com/JJGO/UniverSeg)
 
 ## Few-shot Learning
 
 **Transductive few-shot adapters for medical image segmentation** \
 *Julio Silva-Rodríguez, Jose Dolz, Ismail Ben Ayed* \
 [Mar. 29, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)]
+[[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/jusiro/fewshot-finetuning)] [![GitHub stars](https://img.shields.io/github/stars/jusiro/fewshot-finetuning.svg?logo=github&label=Stars)](https://github.com/jusiro/fewshot-finetuning)
 
+## Continual Learning
+
+**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
+*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2303.06580)]
+
+
+## Parameter-efficient Fine Tuning
+
+**Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study** \
+*Ziyuan Qin, Huahui Yi, Qicheng Lao, Kang Li* \
+[Fed. 07, 2023] [ICLR, 2023] \
+[[Paper](https://arxiv.org/abs/2209.15517)] [[Code](https://github.com/MembrLab/MIU-VL)] [![GitHub stars](https://img.shields.io/github/stars/MembrLab/MIU-VL.svg?logo=github&label=Stars)](https://github.com/MembrLab/MIU-VL)
+
+**Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts** \
+*Zhihong Chen, Shizhe Diao, Benyou Wang, Guanbin Li, Xiang Wan*\
+[Feb. 08, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2302.08958)]
+
+**Segment Anything in Medical Images** \
+*Jun Ma, Bo Wang* \
+[Apr. 24, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12306)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+
+**Medical SAM Adapter: Adapting Segment Anything Model for Medical Image Segmentation** \
+*Junde Wu, Rao Fu, Huihui Fang, Yuanpei Liu, Zhaowei Wang, Yanwu Xu, Yueming Jin, Tal Arbel* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12620)] [[Code](https://github.com/WuJunde/Medical-SAM-Adapter)] [![GitHub stars](https://img.shields.io/github/stars/WuJunde/Medical-SAM-Adapter.svg?logo=github&label=Stars)](https://github.com/WuJunde/Medical-SAM-Adapter)
+
+**Med-Tuning: Exploring Parameter-Efficient Transfer Learning for Medical Volumetric Segmentation** \
+*Wenxuan Wang, Jiachen Shen, Chen Chen, Jianbo Jiao, Yan Zhang, Shanshan Song, Jiangyun Li* \
+[Apr. 21, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.10880)]
+
+**Learnable Ophthalmology SAM** \
+*Zhongxi Qiu, Yan Hu, Heng Li, Jiang Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13425)] [[Code](https://github.com/Qsingle/LearnablePromptSAM)] [![GitHub stars](https://img.shields.io/github/stars/Qsingle/LearnablePromptSAM.svg?logo=github&label=Stars)](https://github.com/Qsingle/LearnablePromptSAM)
+
+**Customized Segment Anything Model for Medical Image Segmentation** \
+*Kaidong Zhang, Dong Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13785)] [[Code](https://github.com/hitachinsk/SAMed)] [![GitHub stars](https://img.shields.io/github/stars/hitachinsk/SAMed.svg?logo=github&label=Stars)](https://github.com/hitachinsk/SAMed)
 
 ## Segment Anything Model (SAM) related
+
+**Segment Anything Model (SAM) for Digital Pathology: Assess Zero-shot Segmentation on Whole Slide Imaging** \
+*Ruining Deng, Can Cui, Quan Liu, Tianyuan Yao, Lucas W. Remedios, Shunxing Bao, Bennett A. Landman, Lee E. Wheless, Lori A. Coburn, Keith T. Wilson, Yaohong Wang, Shilin Zhao, Agnes B. Fogo, Haichun Yang, Yucheng Tang, Yuankai Huo* \
+[Apr. 9, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.04155)]
+
+**SAM vs BET: A Comparative Study for Brain Extraction and Segmentation of Magnetic Resonance Images using Deep Learning** \
+*Sovesh Mohapatra, Advait Gosai, Gottfried Schlaug* \
+[Apr. 10, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.04738)]
 
 **SAM.MD: Zero-shot medical image segmentation capabilities of the Segment Anything Model** \
 *Saikat Roy, Tassilo Wald, Gregor Koehler, Maximilian R. Rokuss, Nico Disch, Julius Holzschuh, David Zimmerer, Klaus H. Maier-Hein* \
@@ -117,20 +182,113 @@ Some segmentation datasets and models designed for a large number of structures 
 **SAMM (Segment Any Medical Model): A 3D Slicer Integration to SAM** \
 *Yihao Liu, Jiaming Zhang, Zhangcong She, Amir Kheradmand, Mehran Armand* \
 [Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)]
+[[Paper](https://arxiv.org/abs/2304.05622)] [[Code](https://github.com/bingogome/samm)] [![GitHub stars](https://img.shields.io/github/stars/bingogome/samm.svg?logo=github&label=Stars)](https://github.com/bingogome/samm)
+
+**SAM Struggles in Concealed Scenes -- Empirical Study on "Segment Anything"** \
+*Ge-Peng Ji, Deng-Ping Fan, Peng Xu, Ming-Ming Cheng, Bowen Zhou, Luc Van Gool* \
+[Apr. 12, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.06022)]
+
+**Can SAM Segment Polyps?** \
+*Tao Zhou, Yizhe Zhang, Yi Zhou, Ye Wu, Chen Gong* \
+[Apr. 15, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.07583)]
+
+**The Segment Anything foundation model achieves favorable brain tumor autosegmentation accuracy on MRI to support radiotherapy treatment planning** \
+*Florian Putz, Johanna Grigo, Thomas Weissmann, Philipp Schubert, Daniel Hoefler, Ahmed Gomaa, Hassen Ben Tkhayat, Amr Hagag, Sebastian Lettmaier, Benjamin Frey, Udo S. Gaipl, Luitpold V. Distel, Sabine Semrau, Christoph Bert, Rainer Fietkau, Yixing Huang* \
+[Apr. 16, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.07875)]
 
 **When SAM Meets Medical Images: An Investigation of Segment Anything Model (SAM) on Multi-phase Liver Tumor Segmentation** \
 *Chuanfei Hu, Xinde Li* \
 [Apr. 17, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.08506)]
 
+**Accuracy of Segment-Anything Model (SAM) in medical image segmentation tasks** \
+*Sheng He, Rina Bao, Jingpeng Li, P. Ellen Grant, Yangming Ou* \
+[Apr. 18, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.09324)]
 
-## Continual Learning
+**Segment Anything Model for Medical Image Analysis: an Experimental Study** \
+*Maciej A. Mazurowski, Haoyu Dong, Hanxue Gu, Jichen Yang, Nicholas Konz, Yixin Zhang* \
+[Apr. 20, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.10517)]
 
-**Towards General Purpose Medical AI: Continual Learning Medical Foundation Model** \
-*Huahui Yi, Ziyuan Qin, Qicheng Lao, Wei Xu, Zekun Jiang, Dequan Wang, Shaoting Zhang, Kang Li* \
-[Apr. 12, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2303.06580)]
+**Input Augmentation with SAM: Boosting Medical Image Segmentation with Segmentation Foundation Model** \
+*Yizhe Zhang, Tao Zhou, Peixian Liang, Danny Z. Chen* \
+[Apr. 22, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.11332)] [[Code](https://github.com/yizhezhang2000/SAMAug)] [![GitHub stars](https://img.shields.io/github/stars/yizhezhang2000/SAMAug.svg?logo=github&label=Stars)](https://github.com/yizhezhang2000/SAMAug)
+
+**Segment Anything in Medical Images** \
+*Jun Ma, Bo Wang* \
+[Apr. 24, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12306)] [[Code](https://github.com/bowang-lab/MedSAM)] [![GitHub stars](https://img.shields.io/github/stars/bowang-lab/MedSAM.svg?logo=github&label=Stars)](https://github.com/bowang-lab/MedSAM)
+
+**Medical SAM Adapter: Adapting Segment Anything Model for Medical Image Segmentation** \
+*Junde Wu, Rao Fu, Huihui Fang, Yuanpei Liu, Zhaowei Wang, Yanwu Xu, Yueming Jin, Tal Arbel* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12620)] [[Code](https://github.com/WuJunde/Medical-SAM-Adapter)] [![GitHub stars](https://img.shields.io/github/stars/WuJunde/Medical-SAM-Adapter.svg?logo=github&label=Stars)](https://github.com/WuJunde/Medical-SAM-Adapter)
+
+**Generalist Vision Foundation Models for Medical Imaging: A Case Study of Segment Anything Model on Zero-Shot Medical Segmentation** \
+*Peilun Shi, Jianing Qiu, Sai Mu Dalike Abaxi, Hao Wei, Frank P.-W. Lo, Wu Yuan* \
+[Apr. 25, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.12637)]
+
+**GazeSAM: What You See is What You Segment** \
+*Bin Wang, Armstrong Aboah, Zheyuan Zhang, Ulas Bagci* \
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13844)] [[Code](https://github.com/ukaukaaaa/GazeSAM)] [![GitHub stars](https://img.shields.io/github/stars/ukaukaaaa/GazeSAM.svg?logo=github&label=Stars)](https://github.com/ukaukaaaa/GazeSAM)
+
+**Customized Segment Anything Model for Medical Image Segmentation** \
+*Kaidong Zhang, Dong Liu*\
+[Apr. 26, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13785)] [[Code](https://github.com/hitachinsk/SAMed)] [![GitHub stars](https://img.shields.io/github/stars/hitachinsk/SAMed.svg?logo=github&label=Stars)](https://github.com/hitachinsk/SAMed)
+
+**SkinSAM: Empowering Skin Cancer Segmentation with Segment Anything Model** \
+*Mingzhe Hu, Yuheng Li, Xiaofeng Yang* \
+[Apr. 27, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.13973)]
+
+**SAM Meets Robotic Surgery: An Empirical Study in Robustness Perspective** \
+*An Wang, Mobarakol Islam, Mengya Xu, Yang Zhang, Hongliang Ren* \
+[Apr. 27, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.14674)]
+
+**Segment Anything Model for Medical Images?** \
+*Yuhao Huang, Xin Yang, Lian Liu, Han Zhou, Ao Chang, Xinrui Zhou, Rusi Chen, Junxuan Yu, Jiongquan Chen, Chaoyu Chen, Haozhe Chi, Xindi Hu, Deng-Ping Fan, Fajin Dong, Dong Ni* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2304.14660)] 👍
+
+**Exploring the Zero-Shot Capabilities of the Segment Anything Model (SAM) in 2D Medical Imaging: A Comprehensive Evaluation and Practical Guideline** \
+*Christian Mattjie, Luis Vinicius de Moura, Rafaela Cappelari Ravazio, Lucas Silveira Kupssinskü, Otávio Parraga, Marcelo Mussi Delucis, Rodrigo Coelho Barros* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00109)]
+
+**SAM on Medical Images: A Comprehensive Study on Three Prompt Modes** \
+*Dongjie Cheng, Ziyuan Qin, Zekun Jiang, Shaoting Zhang, Qicheng Lao, Kang Li* \
+[Apr. 28, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00035)]
+
+**Polyp-SAM: Transfer SAM for Polyp Segmentation** \
+*Yuheng Li, Mingzhe Hu, Xiaofeng Yang* \
+[Apr. 29, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.00293)] [[Code](https://github.com/ricklisz/Polyp-SAM)] [![GitHub stars](https://img.shields.io/github/stars/ricklisz/Polyp-SAM.svg?logo=github&label=Stars)](https://github.com/ricklisz/Polyp-SAM)
+
+**How Segment Anything Model (SAM) Boost Medical Image Segmentation?** \
+*Yichi Zhang, Rushi Jiao* \
+[May 05, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.03678)] [[Code](https://github.com/YichiZhang98/SAM4MIS)] [![GitHub stars](https://img.shields.io/github/stars/YichiZhang98/SAM4MIS.svg?logo=github&label=Stars)](https://github.com/YichiZhang98/SAM4MIS)
+
+**BreastSAM: A Study of Segment Anything Model for Breast Tumor Detection in Ultrasound Images** \
+*Mingzhe Hu, Yuheng Li, Xiaofeng Yang* \
+[May 21, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2305.12447)]
+
+**DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation** \
+*Yifan Gao, Wei Xia, Dingdu Hu, Xin Gao* \
+[Jun 1, 2023] [arXiv, 2023] \
+[[Paper](https://arxiv.org/abs/2306.00499)] [[Code](https://github.com/yifangao112/DeSAM)] [![GitHub stars](https://img.shields.io/github/stars/yifangao112/DeSAM.svg?logo=github&label=Stars)](https://github.com/yifangao112/DeSAM)
+
 
 ## Learning Utility
 
