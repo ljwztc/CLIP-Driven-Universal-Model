@@ -86,7 +86,7 @@ cd ../
 | 22  | Prostate |
 | 23  | Left Head of Femur |
 | 24  | Right Head of Femur |
-| 25  | Celiac Truck |
+| 25  | Celiac Trunk |
 | 26  | Kidney Tumor |
 | 27  | Liver Tumor |
 | 28  | Pancreas Tumor |
