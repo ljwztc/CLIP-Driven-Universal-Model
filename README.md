@@ -24,8 +24,14 @@ ICCV, 2023 <br/>
 RSNA, 2023 <br/>
 [abstract](https://github.com/ljwztc/CLIP-Driven-Universal-Model/blob/main/documents/rnsa_abstract.pdf) | [code](https://github.com/ljwztc/CLIP-Driven-Universal-Model) | slides
 
+## Model
 
-## ⏳ Dataset Link
+| Architecture | Param | Download |
+|  ----  | ----  |  ----  |
+| U-Net  | | link |
+| Swin UNETR | link |
+
+## Dataset
 - 01 [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
 - 02 [Pancreas-CT TCIA](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT)
 - 03 [Combined Healthy Abdominal Organ Segmentation (CHAOS)](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/)
@@ -39,16 +45,9 @@ RSNA, 2023 <br/>
 - 11 [CT volumes with multiple organ segmentations (CT-ORG)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080890)
 - 12 [AbdomenCT 12organ](https://github.com/JunMa11/AbdomenCT-1K)
 
-## 💡 Preparation
-**Main Requirements**  
-> connected-components-3d  
-> h5py==3.6.0  
-> monai==0.9.0  
-> torch==1.11.0  
-> tqdm  
-> fastremap  
+## 0. Preliminary
 
-```
+```bash
 python3 -m venv universal
 source /data/zzhou82/environments/universal/bin/activate
 
@@ -58,90 +57,74 @@ pip install 'monai[all]'
 pip install -r requirements.txt
 cd pretrained_weights/
 wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt
+wget wget https://www.dropbox.com/s/lh5kuyjxwjsxjpl/Genesis_Chest_CT.pt
 cd ../
 ```
 
 **Dataset Pre-Process**  
 1. Download the dataset according to the dataset link and arrange the dataset according to the `dataset/dataset_list/PAOT.txt`.  
-2. Modify the ORGAN_DATASET_DIR value in label_transfer.py (line 51) and NUM_WORKER (line 53)  
+2. Modify [ORGAN_DATASET_DIR](https://github.com/ljwztc/CLIP-Driven-Universal-Model/blob/main/label_transfer.py#L51C1-L51C18) and [NUM_WORKER](https://github.com/ljwztc/CLIP-Driven-Universal-Model/blob/main/label_transfer.py#L53) in label_transfer.py  
 3. `python -W ignore label_transfer.py`
 
 
 **Current Template**
-|  Index   | Organ  |
-|  ----  | ----  |
-| 1  | Spleen |
-| 2  | Right Kidney |
-| 3  | Left Kidney |
-| 4  | Gall Bladder |
-| 5  | Esophagus |
-| 6  | Liver |
-| 7  | Stomach |
-| 8  | Aorta |
-| 9  | Postcava |
-| 10  | Portal Vein and Splenic Vein |
-| 11  | Pancreas |
-| 12  | Right Adrenal Gland |
-| 13  | Left Adrenal Gland |
-| 14  | Duodenum |
-| 15  | Hepatic Vessel |
-| 16  | Right Lung |
-| 17  | Left Lung |
-| 18  | Colon |
-| 19  | Intestine |
-| 20  | Rectum |
-| 21  | Bladder |
-| 22  | Prostate |
-| 23  | Left Head of Femur |
-| 24  | Right Head of Femur |
-| 25  | Celiac Trunk |
-| 26  | Kidney Tumor |
-| 27  | Liver Tumor |
-| 28  | Pancreas Tumor |
-| 29  | Hepatic Vessel Tumor |
-| 30  | Lung Tumor |
-| 31  | Colon Tumor |
-| 32  | Kidney Cyst |
+|  Index   | Organ  | Index | Organ |
+|  ----  | ----  |  ----  | ----  |
+| 1  | Spleen | 17 | Left Lung |
+| 2  | Right Kidney | 18  | Colon |
+| 3  | Left Kidney | 19  | Intestine |
+| 4  | Gall Bladder | 20  | Rectum |
+| 5  | Esophagus | 21  | Bladder |
+| 6  | Liver | 22  | Prostate |
+| 7  | Stomach | 23  | Left Head of Femur |
+| 8  | Aorta | 24  | Right Head of Femur |
+| 9  | Postcava | 25  | Celiac Trunk |
+| 10  | Portal Vein and Splenic Vein | 26  | Kidney Tumor |
+| 11  | Pancreas | 27  | Liver Tumor |
+| 12  | Right Adrenal Gland | 28  | Pancreas Tumor |
+| 13  | Left Adrenal Gland | 29  | Hepatic Vessel Tumor |
+| 14  | Duodenum | 30  | Lung Tumor |
+| 15  | Hepatic Vessel | 31  | Colon Tumor |
+| 16  | Right Lung | 32  | Kidney Cyst |
 
 **How expand to new dataset with new organ?**
 1. Set the following index for new organ. (e.g. 33 for vermiform appendix)  
 2. Check if there are any organs that are not divided into left and right in the dataset. (e.g. kidney, lung, etc.) The `RL_Splitd` in `label_transfer.py` is used to processed this case.  
 3. Set up a new transfer list for new dataset in TEMPLATE (line 58 in label_transfer.py). (If a new dataset with Intestine labeled as 1 and vermiform appendix labeled as 2, we set the transfer list as [19, 33])  
 4. Run the program `label_transfer.py` to get new post-processing labels.  
+
 **More details please take a look at [common questions](documents/common_questions.md)**
 
+## 1. Training
 
-
-## 📦 Training
-```
+```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -W ignore -m torch.distributed.launch --nproc_per_node=8 --master_port=1234 train.py --dist True --data_root_path /mnt/zzhou82/PublicAbdominalData/ --num_workers 12 --num_samples 4 --cache_dataset --cache_rate 0.6 --uniform_sample
 ```
-## 📦 Validation
-```
+
+## 2. Validation
+
+```bash
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --data_root_path /mnt/zzhou82/PublicAbdominalData/ --start_epoch 10 --end_epoch 40 --epoch_interval 10 --cache_dataset --cache_rate 0.6
 ```
-## 📦 Test
+
+## 3. Evaluation
 ```
 CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path /mnt/zzhou82/PublicAbdominalData/ --store_result --cache_dataset --cache_rate 0.6
 ```
 
-## 📒 To do
+## To do
 - [x] Code release
 - [x] Dataset link
 - [x] Support different backbones (SwinUNETR, Unet, DiNTS, Unet++)
-- [ ] Model release
+- [x] Model release
 - [ ] Pesudo label release
 - [ ] Tutorials for generalizability, transferability, and extensibility
 
-## 🛡️ License
+## Acknowledgement
 
-This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
+A lot of code is modified from . This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research and partially by the Patrick J. McGovern Foundation Award. We appreciate the effort of the [MONAI Team](https://github.com/Project-MONAI/MONAI) to provide open-source code for the community.
 
-## 🙏 Acknowledgement
-
-A lot of code is modified from [monai](https://github.com/Project-MONAI/MONAI).
-
-## 📝 Citation
+## Citation
 
 If you find this repository useful, please consider citing this paper:
 ```
