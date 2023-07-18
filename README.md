@@ -29,7 +29,7 @@ RSNA, 2023 <br/>
 | Architecture | Param | Download |
 |  ----  | ----  |  ----  |
 | U-Net  | | link |
-| Swin UNETR | link |
+| Swin UNETR | | link |
 
 ## Dataset
 - 01 [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
