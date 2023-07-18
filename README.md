@@ -28,8 +28,8 @@ RSNA, 2023 <br/>
 
 | Architecture | Param | Download |
 |  ----  | ----  |  ----  |
-| U-Net  | | link |
-| Swin UNETR | | link |
+| U-Net  | | [link](https://www.dropbox.com/s/lyunaue0wwhmv5w/unet.pth) |
+| Swin UNETR | | [link](https://www.dropbox.com/s/jdsodw2vemsy8sz/swinunetr.pth) |
 
 ## Dataset
 - 01 [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
@@ -112,7 +112,7 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --data_root_path /mnt/zzho
 CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path /mnt/zzhou82/PublicAbdominalData/ --store_result --cache_dataset --cache_rate 0.6
 ```
 
-## To do
+## Todo
 - [x] Code release
 - [x] Dataset link
 - [x] Support different backbones (SwinUNETR, Unet, DiNTS, Unet++)
