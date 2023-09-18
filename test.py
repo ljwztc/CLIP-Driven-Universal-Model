@@ -127,11 +127,12 @@ def main():
     parser.add_argument("--device")
     parser.add_argument("--epoch", default=0)
     ## logging
-    parser.add_argument('--log_name', default='Nvidia/old_fold0', help='The path resume from checkpoint')
+    parser.add_argument('--log_name', default='inference', help='The path resume from checkpoint')
     ## model load
-    parser.add_argument('--resume', default='./out/Nvidia/old_fold0/aepoch_500.pth', help='The path resume from checkpoint')
+    parser.add_argument('--resume', default='./pretrained_weights/swinunetr.pth', help='The path resume from checkpoint')
     parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt', 
                         help='The path of pretrain model')
+    parser.add_argument('--backbone', default='swinunetr', help='backbone [swinunetr or unet]')
     ## hyperparameter
     parser.add_argument('--max_epoch', default=1000, type=int, help='Number of training epoches')
     parser.add_argument('--store_num', default=10, type=int, help='Store model how often')
@@ -139,12 +140,12 @@ def main():
     parser.add_argument('--weight_decay', default=1e-5, type=float, help='Weight Decay')
 
     ## dataset
-    parser.add_argument('--dataset_list', nargs='+', default=['PAOT_123457891213', 'PAOT_10_inner']) # 'PAOT', 'felix'
+    parser.add_argument('--dataset_list', nargs='+', default=['PAOT_123457891213']) # 'PAOT', 'felix'
     ### please check this argment carefully
     ### PAOT: include PAOT_123457891213 and PAOT_10
     ### PAOT_123457891213: include 1 2 3 4 5 7 8 9 12 13
     ### PAOT_10_inner
-    parser.add_argument('--data_root_path', default='/home/jliu288/data/whole_organ/', help='data root path')
+    parser.add_argument('--data_root_path', default='DATA_ROOT', help='data root path')
     parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
     parser.add_argument('--batch_size', default=1, type=int, help='batch size')
     parser.add_argument('--num_workers', default=8, type=int, help='workers numebr for DataLoader')
@@ -185,8 +186,13 @@ def main():
     # args.epoch = checkpoint['epoch']
 
     for key, value in load_dict.items():
-        name = '.'.join(key.split('.')[1:])
+        if 'swinViT' in key or 'encoder' in key or 'decoder' in key:
+            name = '.'.join(key.split('.')[1:])
+            name = 'backbone.' + name
+        else:
+            name = '.'.join(key.split('.')[1:])
         store_dict[name] = value
+
 
     model.load_state_dict(store_dict)
     print('Use pretrained weights')

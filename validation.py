@@ -193,7 +193,11 @@ def main():
         load_dict = torch.load(store_path)['net']
 
         for key, value in load_dict.items():
-            name = '.'.join(key.split('.')[1:])
+            if 'swinViT' in key or 'encoder' in key or 'decoder' in key:
+                name = '.'.join(key.split('.')[1:])
+                name = 'backbone.' + name
+            else:
+                name = '.'.join(key.split('.')[1:])
             store_dict[name] = value
 
         model.load_state_dict(store_dict)
