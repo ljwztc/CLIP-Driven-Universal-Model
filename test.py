@@ -145,7 +145,7 @@ def main():
     ### PAOT: include PAOT_123457891213 and PAOT_10
     ### PAOT_123457891213: include 1 2 3 4 5 7 8 9 12 13
     ### PAOT_10_inner
-    parser.add_argument('--data_root_path', default='DATA_ROOT', help='data root path')
+    parser.add_argument('--data_root_path', default='/computenodes/node31/team1/jliu/data/ct_data/', help='data root path')
     parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
     parser.add_argument('--batch_size', default=1, type=int, help='batch size')
     parser.add_argument('--num_workers', default=8, type=int, help='workers numebr for DataLoader')
