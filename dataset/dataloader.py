@@ -388,6 +388,53 @@ def get_loader(args):
         test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=4, collate_fn=list_data_collate)
         return test_loader, val_transforms
 
+
+def get_loader_without_gt(args):
+    val_transforms = Compose(
+        [
+            LoadImaged(keys=["image"]),
+            AddChanneld(keys=["image"]),
+            Orientationd(keys=["image"], axcodes="RAS"),
+            # ToTemplatelabeld(keys=['label']),
+            # RL_Splitd(keys=['label']),
+            Spacingd(
+                keys=["image"],
+                pixdim=(args.space_x, args.space_y, args.space_z),
+                mode=("bilinear"),
+            ), # process h5 to here
+            ScaleIntensityRanged(
+                keys=["image"],
+                a_min=args.a_min,
+                a_max=args.a_max,
+                b_min=args.b_min,
+                b_max=args.b_max,
+                clip=True,
+            ),
+            CropForegroundd(keys=["image"], source_key="image"),
+            ToTensord(keys=["image"]),
+        ]
+    )
+
+    ## test dict part
+    test_img = []
+    test_name = []
+    for item in args.dataset_list:
+        for line in open(args.data_txt_path + item +'_test.txt'):
+            name = line.strip().split()[1].split('.')[0]
+            test_img.append(args.data_root_path + line.strip().split()[0])
+            test_name.append(name)
+    data_dicts_test = [{'image': image, 'name': name}
+                for image, name in zip(test_img, test_name)]
+    print('test len {}'.format(len(data_dicts_test)))
+    
+    if args.cache_dataset:
+        test_dataset = CacheDataset(data=data_dicts_test, transform=val_transforms, cache_rate=args.cache_rate)
+    else:
+        test_dataset = Dataset(data=data_dicts_test, transform=val_transforms)
+    test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=4, collate_fn=list_data_collate)
+    return test_loader, val_transforms
+
+
 if __name__ == "__main__":
     train_loader, test_loader = partial_label_dataloader()
     for index, item in enumerate(test_loader):
