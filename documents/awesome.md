@@ -66,11 +66,6 @@ Some segmentation datasets and models designed for a large number of structures 
 [Nov. 22, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/pdf/2311.13385.pdf)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [![GitHub stars](https://img.shields.io/github/stars/BAAI-DCAI/SegVol.svg?logo=github&label=Stars)](https://github.com/BAAI-DCAI/SegVol)
 
-**Universal Segmentation of 33 Anatomies** \
-*Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
-[Mar. 04, 2022] [arXiv, 2022] \
-[[Paper](https://arxiv.org/abs/2203.02098)]
-
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
 [Jan. 02, 2023] [arXiv, 2023] \
@@ -91,6 +86,10 @@ Some segmentation datasets and models designed for a large number of structures 
 [Apr. 13, 2023] [arXiv, 2023] \
 [[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
 
+**Universal Segmentation of 33 Anatomies** \
+*Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
+[Mar. 04, 2022] [arXiv, 2022] \
+[[Paper](https://arxiv.org/abs/2203.02098)]
 
 ## NLP
 
