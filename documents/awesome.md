@@ -84,7 +84,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
 *Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao* \
 [Apr. 13, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/Ziyan-Huang/STU-Net.svg?logo=github&label=Stars)](https://github.com/Ziyan-Huang/STU-Net)
+[[Paper](https://arxiv.org/abs/2304.06716)] [[Code](https://github.com/Ziyan-Huang/STU-Net)] [![GitHub stars](https://img.shields.io/github/stars/uni-medical/STU-Net.svg?logo=github&label=Stars)](https://github.com/uni-medical/STU-Net)
 
 **Universal Segmentation of 33 Anatomies** \
 *Pengbo Liu, Yang Deng, Ce Wang, Yuan Hui, Qian Li, Jun Li, Shiwei Luo, Mengke Sun, Quan Quan, Shuxin Yang, You Hao, Honghu Xiao, Chunpeng Zhao, Xinbao Wu, S. Kevin Zhou* \
