@@ -79,7 +79,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation** \
 *Constantin Ulrich, Fabian Isensee, Tassilo Wald, Maximilian Zenk, Michael Baumgartner, Klaus H. Maier-Hein* \
 [Mar. 25, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/abs/2303.14444)]
+[[Paper](https://arxiv.org/abs/2303.14444)] [[Code](https://github.com/yeerwen/UniSeg)] [![GitHub stars](https://img.shields.io/github/stars/MIC-DKFZ/MultiTalent.svg?logo=github&label=Stars)](https://github.com/MIC-DKFZ/MultiTalent)
 
 **UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner** \
 *Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Yong Xia* \
