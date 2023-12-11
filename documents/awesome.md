@@ -64,7 +64,7 @@ Some segmentation datasets and models designed for a large number of structures 
 **SegVol: Universal and Interactive Volumetric Medical Image Segmentation** \
 *Yuxin Du, Fan Bai, Tiejun Huang, Bo Zhao* \
 [Nov. 22, 2023] [arXiv, 2023] \
-[[Paper](https://arxiv.org/pdf/2311.13385.pdf)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [![GitHub stars](https://img.shields.io/github/stars/BAAI-DCAI/SegVol.svg?logo=github&label=Stars)](https://github.com/BAAI-DCAI/SegVol)
+[[Paper](https://arxiv.org/pdf/2311.13385.pdf)] [[Code](https://github.com/BAAI-DCAI/SegVol)] [![GitHub stars](https://img.shields.io/github/stars/BAAI-DCAI/SegVol.svg?logo=github&label=Stars)](https://github.com/BAAI-DCAI/SegVol)
 
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
