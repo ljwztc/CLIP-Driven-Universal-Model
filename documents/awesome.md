@@ -68,17 +68,17 @@ Some segmentation datasets and models designed for a large number of structures 
 
 **CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection** \
 *Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A. Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, Zongwei Zhou* \
-[Jan. 02, 2023] [arXiv, 2023] \
+[Jan. 02, 2023] [ICCV, 2023] \
 [[Paper](https://arxiv.org/abs/2301.00785)] [[Code](https://github.com/ljwztc/CLIP-Driven-Universal-Model)] [![GitHub stars](https://img.shields.io/github/stars/ljwztc/CLIP-Driven-Universal-Model.svg?logo=github&label=Stars)](https://github.com/ljwztc/CLIP-Driven-Universal-Model)
 
 **MultiTalent: A Multi-Dataset Approach to Medical Image Segmentation** \
 *Constantin Ulrich, Fabian Isensee, Tassilo Wald, Maximilian Zenk, Michael Baumgartner, Klaus H. Maier-Hein* \
-[Mar. 25, 2023] [arXiv, 2023] \
+[Mar. 25, 2023] [MICCAI, 2023] \
 [[Paper](https://arxiv.org/abs/2303.14444)] [[Code](https://github.com/yeerwen/UniSeg)] [![GitHub stars](https://img.shields.io/github/stars/MIC-DKFZ/MultiTalent.svg?logo=github&label=Stars)](https://github.com/MIC-DKFZ/MultiTalent)
 
 **UniSeg: A Prompt-driven Universal Segmentation Model as well as A Strong Representation Learner** \
 *Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Yong Xia* \
-[Apr. 07, 2023] [arXiv, 2023] \
+[Apr. 07, 2023] [MICCAI, 2023] \
 [[Paper](https://arxiv.org/abs/2304.03493)] [[Code](https://github.com/yeerwen/UniSeg)] [![GitHub stars](https://img.shields.io/github/stars/yeerwen/UniSeg.svg?logo=github&label=Stars)](https://github.com/yeerwen/UniSeg)
 
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
