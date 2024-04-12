@@ -19,90 +19,50 @@ from dataset.dataloader import get_loader_without_gt
 from utils import loss
 from utils.utils import dice_score, threshold_organ, visualize_label, merge_label, get_key
 from utils.utils import TEMPLATE, ORGAN_NAME, NUM_CLASS
-from utils.utils import organ_post_process, threshold_organ
+from utils.utils import organ_post_process, threshold_organ, save_results
 
 torch.multiprocessing.set_sharing_strategy('file_system')
 
 
 def validation(model, ValLoader, val_transforms, args):
-    save_dir = 'out/' + args.log_name #+ f'/pesudolbl_{args.epoch}'
-    if not os.path.isdir(save_dir):
-        os.mkdir(save_dir)
-        os.mkdir(save_dir+'/predict')
+    if not os.path.exists(args.result_save_path):
+        os.makedirs(args.result_save_path)
     model.eval()
-    dice_list = {}
-    for key in TEMPLATE.keys():
-        dice_list[key] = np.zeros((2, NUM_CLASS)) # 1st row for dice, 2nd row for count
     for index, batch in enumerate(tqdm(ValLoader)):
-        # print('%d processd' % (index))
         image, name = batch["image"].cuda(), batch["name"]
-        print(image.shape)
-        # print(label.shape)
         with torch.no_grad():
-            # with torch.autocast(device_type="cuda", dtype=torch.float16):
             pred = sliding_window_inference(image, (args.roi_x, args.roi_y, args.roi_z), 1, model, overlap=0.5, mode='gaussian')
             pred_sigmoid = F.sigmoid(pred)
         
-        #pred_hard = threshold_organ(pred_sigmoid, organ=args.threshold_organ, threshold=args.threshold)
         pred_hard = threshold_organ(pred_sigmoid)
         pred_hard = pred_hard.cpu()
         torch.cuda.empty_cache()
 
-        B = pred_hard.shape[0]
-        for b in range(B):
-            content = 'case%s| '%(name[b])
-            template_key = get_key(name[b])
-            organ_list = TEMPLATE[template_key]
-            pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list, args.log_name+'/'+name[0].split('/')[0]+'/'+name[0].split('/')[-1],args)
-            pred_hard_post = torch.tensor(pred_hard_post)
+        # use organ_list to indicate the saved organ
+        organ_list = [i for i in range(1,33)]
+        # organ_list = [26, 32]
+        # if 'liver' in name[0]:
+        #     organ_list = [6, 27]
+        # elif 'kidney' in name[0]:
+        #     organ_list = [2, 3, 26]
+        # elif 'hepaticvessel' in name[0]:
+        #     organ_list = [15, 29]
+        # elif 'pancreas' in name[0]:
+        #     organ_list = [11, 28]
+        # elif 'colon' in name[0]:
+        #     organ_list = [31]
+        # elif 'lung' in name[0]:
+        #     organ_list = [30]
+        # elif 'spleen' in name[0]:
+        #     organ_list = [1]
 
-            # for organ in organ_list:
-            #     if torch.sum(label[b,organ-1,:,:,:].cuda()) != 0:
-            #         dice_organ, recall, precision = dice_score(pred_hard_post[b,organ-1,:,:,:].cuda(), label[b,organ-1,:,:,:].cuda())
-            #         dice_list[template_key][0][organ-1] += dice_organ.item()
-            #         dice_list[template_key][1][organ-1] += 1
-            #         content += '%s: %.4f, '%(ORGAN_NAME[organ-1], dice_organ.item())
-            #         print('%s: dice %.4f, recall %.4f, precision %.4f.'%(ORGAN_NAME[organ-1], dice_organ.item(), recall.item(), precision.item()))
-            # print(content)
-        
+        pred_hard_post = organ_post_process(pred_hard.numpy(), organ_list, args.log_name+'/'+name[0].split('/')[0]+'/'+name[0].split('/')[-1],args)
+        pred_hard_post = torch.tensor(pred_hard_post)
+        batch['results'] = pred_hard_post
 
-            ### testing phase for this function
-            one_channel_label_v1, one_channel_label_v2 = merge_label(pred_hard_post, name)
-            batch['one_channel_label_v1'] = one_channel_label_v1.cpu()
-            batch['one_channel_label_v2'] = one_channel_label_v2.cpu()
-            visualize_label(batch, save_dir + '/output/' + name[0].split('/')[0] , val_transforms)
+        save_results(batch, args.result_save_path, val_transforms, organ_list)
             
         torch.cuda.empty_cache()
-    
-    ave_organ_dice = np.zeros((2, NUM_CLASS))
-
-    # with open('out/'+args.log_name+f'/test_{args.epoch}.txt', 'w') as f:
-    #     for key in TEMPLATE.keys():
-    #         organ_list = TEMPLATE[key]
-    #         content = 'Task%s| '%(key)
-    #         for organ in organ_list:
-    #             dice = dice_list[key][0][organ-1] / dice_list[key][1][organ-1]
-    #             content += '%s: %.4f, '%(ORGAN_NAME[organ-1], dice)
-    #             ave_organ_dice[0][organ-1] += dice_list[key][0][organ-1]
-    #             ave_organ_dice[1][organ-1] += dice_list[key][1][organ-1]
-    #         print(content)
-    #         f.write(content)
-    #         f.write('\n')
-    #     content = 'Average | '
-    #     for i in range(NUM_CLASS):
-    #         content += '%s: %.4f, '%(ORGAN_NAME[i], ave_organ_dice[0][i] / ave_organ_dice[1][i])
-    #     print(content)
-    #     f.write(content)
-    #     f.write('\n')
-    #     print(np.mean(ave_organ_dice[0] / ave_organ_dice[1]))
-    #     f.write('%s: %.4f, '%('average', np.mean(ave_organ_dice[0] / ave_organ_dice[1])))
-    #     f.write('\n')
-        
-    
-    # np.save(save_dir + '/result.npy', dice_list)
-    # load
-    # dice_list = np.load(/out/epoch_xxx/result.npy, allow_pickle=True)
-
 
 
 
@@ -118,8 +78,6 @@ def main():
     parser.add_argument('--log_name', default='Nvidia', help='The path resume from checkpoint')
     ## model load
     parser.add_argument('--resume', default='./pretrained_weights/swinunetr.pth', help='The path resume from checkpoint')
-    parser.add_argument('--pretrain', default='./pretrained_weights/swin_unetr.base_5000ep_f48_lr2e-4_pretrained.pt', 
-                        help='The path of pretrain model')
     parser.add_argument('--backbone', default='swinunetr', help='backbone [swinunetr or unet]')
     ## hyperparameter
     parser.add_argument('--max_epoch', default=1000, type=int, help='Number of training epoches')
@@ -128,21 +86,15 @@ def main():
     parser.add_argument('--weight_decay', default=1e-5, type=float, help='Weight Decay')
 
     ## dataset
-    parser.add_argument('--dataset_list', nargs='+', default=['PAOT_123457891213', 'PAOT_10_inner']) # 'PAOT', 'felix'
-    ### please check this argment carefully
-    ### PAOT: include PAOT_123457891213 and PAOT_10
-    ### PAOT_123457891213: include 1 2 3 4 5 7 8 9 12 13
-    ### PAOT_10_inner: same with NVIDIA for comparison
-    ### PAOT_10: original division
-    parser.add_argument('--data_root_path', default='/computenodes/node31/team1/jliu/data/ct_data/', help='data root path')
-    parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
+    parser.add_argument('--data_root_path', default=None, help='data root path')
+    parser.add_argument('--result_save_path', default=None, help='path for save result')
     parser.add_argument('--batch_size', default=1, type=int, help='batch size')
     parser.add_argument('--num_workers', default=8, type=int, help='workers numebr for DataLoader')
     parser.add_argument('--a_min', default=-175, type=float, help='a_min in ScaleIntensityRanged')
     parser.add_argument('--a_max', default=250, type=float, help='a_max in ScaleIntensityRanged')
     parser.add_argument('--b_min', default=0.0, type=float, help='b_min in ScaleIntensityRanged')
     parser.add_argument('--b_max', default=1.0, type=float, help='b_max in ScaleIntensityRanged')
-    parser.add_argument('--space_x', default=1.5, type=float, help='spacing in x direction')
+    parser.add_argument('--space_x', default=1.5, type= float, help='spacing in x direction')
     parser.add_argument('--space_y', default=1.5, type=float, help='spacing in y direction')
     parser.add_argument('--space_z', default=1.5, type=float, help='spacing in z direction')
     parser.add_argument('--roi_x', default=96, type=int, help='roi size in x direction')
@@ -173,7 +125,7 @@ def main():
     checkpoint = torch.load(args.resume)
     load_dict = checkpoint['net']
     # args.epoch = checkpoint['epoch']
-
+    num_count = 0
     for key, value in load_dict.items():
         if 'swinViT' in key or 'encoder' in key or 'decoder' in key:
             name = '.'.join(key.split('.')[1:])
@@ -181,9 +133,10 @@ def main():
         else:
             name = '.'.join(key.split('.')[1:])
         store_dict[name] = value
+        num_count += 1
 
     model.load_state_dict(store_dict)
-    print('Use pretrained weights')
+    print('Use pretrained weights. load', num_count, 'params into', len(store_dict.keys()))
 
     model.cuda()
 

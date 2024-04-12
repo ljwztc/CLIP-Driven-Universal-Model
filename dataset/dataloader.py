@@ -31,6 +31,7 @@ import time
 import warnings
 from copy import copy, deepcopy
 import h5py
+import glob
 
 
 import numpy as np
@@ -416,15 +417,9 @@ def get_loader_without_gt(args):
     )
 
     ## test dict part
-    test_img = []
-    test_name = []
-    for item in args.dataset_list:
-        for line in open(args.data_txt_path + item +'_test.txt'):
-            name = line.strip().split()[1].split('.')[0]
-            test_img.append(args.data_root_path + line.strip().split()[0])
-            test_name.append(name)
-    data_dicts_test = [{'image': image, 'name': name}
-                for image, name in zip(test_img, test_name)]
+    nii_files = glob.glob(args.data_root_path + '/**.nii.gz')
+    data_dicts_test = [{'image': image, 'name': image.split('/')[-1].split('.')[0]}
+                for image in nii_files]
     print('test len {}'.format(len(data_dicts_test)))
     
     if args.cache_dataset:

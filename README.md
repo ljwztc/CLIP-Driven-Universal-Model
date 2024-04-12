@@ -1,4 +1,5 @@
 # News
+ - 🔥 The pseudo-label with manual refienment could be found in [AbdonmenAtlas 1.0](https://github.com/MrGiovanni/AbdomenAtlas)
  - 🔥 We collect recent medical universal models in [AWESOME MEDICAL UNIVERSAL MODEL](documents/awesome.md) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re).
  - 😎 We have document for [common questions for code](documents/common_code_questions.md) and [common questions for paper](documents/common_paper_questions.md).
 
@@ -47,8 +48,24 @@ RSNA, 2023 <br/>
 
 The post_label can be downloaded via [link](https://portland-my.sharepoint.com/:u:/g/personal/jliu288-c_my_cityu_edu_hk/EX04Ilv4zh1Lm_HB0wnpaykB4Slef043RVWhX3lN05gylw?e=qG0DOS).
 
-## 0. Preliminary
+## Direct Inference in Your OWN CT scans
+1. Put your all CT scans with nii.gz prefix in one directory. For example, `/home/data/ct/`.  
+2. Run following code.  
 
+```
+conda create -n universalmodel python=3.7
+conda activate universalmodel
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113 
+## please modify according to the CUDA version in your server
+pip install 'monai[all]'
+pip install -r requirements.txt
+cd pretrained_weights/
+wget https://www.dropbox.com/s/jdsodw2vemsy8sz/swinunetr.pth
+python pred_pseudo.py --data_root_path PATH_TO_IMG_DIR --result_save_path PATH_TO_result_DIR 
+## For example: python pred_pseudo.py --data_root_path /home/data/ct/ --result_save_path /home/data/result
+```
+
+## 0. Preliminary
 ```bash
 python3 -m venv universal
 source /data/zzhou82/environments/universal/bin/activate
@@ -119,8 +136,8 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --da
 - [x] Dataset link
 - [x] Support different backbones (SwinUNETR, Unet, DiNTS, Unet++)
 - [x] Model release
-- [ ] Pesudo label release
-- [ ] Tutorials for generalizability, transferability, and extensibility
+- [x] Pesudo label release
+- [x] Tutorials for Inference
 
 ## Acknowledgement
 
