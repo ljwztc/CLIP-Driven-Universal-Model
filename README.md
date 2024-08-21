@@ -61,6 +61,7 @@ pip install 'monai[all]'
 pip install -r requirements.txt
 cd pretrained_weights/
 wget https://www.dropbox.com/s/jdsodw2vemsy8sz/swinunetr.pth
+cd ../
 python pred_pseudo.py --data_root_path PATH_TO_IMG_DIR --result_save_path PATH_TO_result_DIR 
 ## For example: python pred_pseudo.py --data_root_path /home/data/ct/ --result_save_path /home/data/result
 ```
