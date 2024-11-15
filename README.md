@@ -29,8 +29,8 @@ RSNA, 2023 <br/>
 
 | Architecture | Param | Download |
 |  ----  | ----  |  ----  |
-| U-Net  | 19.08M | [link](https://huggingface.co/MrGiovanni/SuPreM/resolve/main/supervised_clip_driven_universal_unet_2100.pth?download=true) |
-| Swin UNETR | 62.19M | [link](https://huggingface.co/MrGiovanni/SuPreM/resolve/main/supervised_clip_driven_universal_swin_unetr_2100.pth?download=true) |
+| U-Net  | 19.08M | [link](https://huggingface.co/ljwztc/CLIP-Driven-Universal-Model/resolve/main/clip_driven_universal_unet.pth?download=true) |
+| Swin UNETR | 62.19M | [link](https://huggingface.co/ljwztc/CLIP-Driven-Universal-Model/resolve/main/clip_driven_universal_swin_unetr.pth?download=true) |
 
 ## Dataset
 - 01 [Multi-Atlas Labeling Beyond the Cranial Vault - Workshop and Challenge (BTCV)](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
@@ -60,11 +60,10 @@ pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --e
 pip install 'monai[all]'
 pip install -r requirements.txt
 cd pretrained_weights/
-wget https://www.dropbox.com/s/jdsodw2vemsy8sz/swinunetr.pth
-## Or you can download with https://www.dropbox.com/scl/fi/fhtbwxfrw5yahz50ladtc/clip_driven_universal_model.pth?rlkey=tq4nnfdtrv7dn1wv7qy1peox2&st=fuepxd0m&dl=0
+wget https://huggingface.co/ljwztc/CLIP-Driven-Universal-Model/resolve/main/clip_driven_universal_swin_unetr.pth?download=true
 cd ../
-python pred_pseudo.py --data_root_path PATH_TO_IMG_DIR --result_save_path PATH_TO_result_DIR 
-## For example: python pred_pseudo.py --data_root_path /home/data/ct/ --result_save_path /home/data/result
+python pred_pseudo.py --data_root_path PATH_TO_IMG_DIR --result_save_path PATH_TO_result_DIR --resume ./pretrained_weights/clip_driven_universal_swin_unetr.pth
+## For example: python pred_pseudo.py --data_root_path /home/data/ct/ --result_save_path /home/data/result --resume ./pretrained_weights/clip_driven_universal_swin_unetr.pth
 ```
 
 ## 0. Preliminary
