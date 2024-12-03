@@ -118,18 +118,18 @@ cd ../
 ## 1. Training
 
 ```bash
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -W ignore -m torch.distributed.launch --nproc_per_node=8 --master_port=1234 train.py --dist True --data_root_path /mnt/zzhou82/PublicAbdominalData/ --num_workers 12 --num_samples 4 --cache_dataset --cache_rate 0.6 --uniform_sample
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -W ignore -m torch.distributed.launch --nproc_per_node=8 --master_port=1234 train.py --dist True --data_root_path DATA_DIR --num_workers 12 --num_samples 4 --cache_dataset --cache_rate 0.6 --uniform_sample
 ```
 
 ## 2. Validation
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --data_root_path /mnt/zzhou82/PublicAbdominalData/ --start_epoch 10 --end_epoch 40 --epoch_interval 10 --cache_dataset --cache_rate 0.6
+CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --data_root_path DATA_DIR --start_epoch 10 --end_epoch 40 --epoch_interval 10 --cache_dataset --cache_rate 0.6
 ```
 
 ## 3. Evaluation
 ```
-CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path /mnt/zzhou82/PublicAbdominalData/ --store_result --cache_dataset --cache_rate 0.6
+CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path DATA_DIR --store_result --cache_dataset --cache_rate 0.6
 ```
 
 ## Todo
@@ -142,16 +142,17 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --da
 
 ## Acknowledgement
 
-A lot of code is modified from . This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research and partially by the Patrick J. McGovern Foundation Award. We appreciate the effort of the [MONAI Team](https://github.com/Project-MONAI/MONAI) to provide open-source code for the community.
+This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research and partially by the Patrick J. McGovern Foundation Award. We appreciate the effort of the [MONAI Team](https://github.com/Project-MONAI/MONAI) to provide open-source code for the community.
 
 ## Citation
 
 If you find this repository useful, please consider citing this paper:
 ```
-@article{liu2023clip,
-  title={CLIP-Driven Universal Model for Organ Segmentation and Tumor Detection},
-  author={Liu, Jie and Zhang, Yixiao and Chen, Jie-Neng and Xiao, Junfei and Lu, Yongyi and Landman, Bennett A and Yuan, Yixuan and Yuille, Alan and Tang, Yucheng and Zhou, Zongwei},
-  journal={arXiv preprint arXiv:2301.00785},
+@inproceedings{liu2023clip,
+  title={Clip-driven universal model for organ segmentation and tumor detection},
+  author={Liu, Jie and Zhang, Yixiao and Chen, Jie-Neng and Xiao, Junfei and Lu, Yongyi and A Landman, Bennett and Yuan, Yixuan and Yuille, Alan and Tang, Yucheng and Zhou, Zongwei},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={21152--21164},
   year={2023}
 }
 ```
