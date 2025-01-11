@@ -1,11 +1,22 @@
-# News
+<h1 align="center">CLIP-Driven Universal Model</h1>
+
+<div align="center">
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=ljwztc/CLIP-Driven-Universal-Model)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ljwztc/CLIP-Driven-Universal-Model?style=social)](https://github.com/ljwztc/CLIP-Driven-Universal-Model/stargazers)
+<a href="https://twitter.com/bodymaps317">
+        <img src="https://img.shields.io/twitter/follow/BodyMaps?style=social" alt="Follow on Twitter" />
+</a><br/>
+**Subscribe us: https://groups.google.com/u/2/g/bodymaps**  
+
+</div>
+
+<p align="center"><img width="80%" src="teaser_fig.png" /></p>
+
+## News
  - 🔥 The pseudo-label with manual refinement could be found in [AbdonmenAtlas 1.0](https://github.com/MrGiovanni/AbdomenAtlas)
  - 🔥 We collect recent medical universal models in [AWESOME MEDICAL UNIVERSAL MODEL](documents/awesome.md) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re).
  - 😎 We have document for [common questions for code](documents/common_code_questions.md) and [common questions for paper](documents/common_paper_questions.md).
-
-# CLIP-Driven Universal Model
-
-<img src="teaser_fig.png" width = "480" height = "345" alt="" align=center />
 
 ## Paper
 This repository provides the official implementation of Universal Model.
