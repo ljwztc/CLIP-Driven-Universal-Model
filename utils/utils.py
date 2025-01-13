@@ -671,7 +671,7 @@ def save_results(batch, save_dir, input_transform, organ_list):
                 to_tensor=True,
             ),
             SaveImaged(keys=ORGAN_NAME[organ-1], 
-                    meta_keys="image_meta_dict" , 
+                    meta_keys="original_meta_dict" , # Restore to original meta information
                     output_dir=save_dir, 
                     output_postfix=ORGAN_NAME[organ-1], 
                     resample=False
