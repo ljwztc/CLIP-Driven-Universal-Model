@@ -18,6 +18,7 @@ from monai.transforms import (
     apply_transform,
     RandZoomd,
     RandCropByLabelClassesd,
+    CopyItemsd,
 )
 
 import collections.abc
@@ -394,6 +395,7 @@ def get_loader_without_gt(args):
     val_transforms = Compose(
         [
             LoadImaged(keys=["image"]),
+            CopyItemsd(keys=["image_meta_dict"], names=["original_meta_dict"]), # copy the meta data of original CT before cropping and resampling
             AddChanneld(keys=["image"]),
             Orientationd(keys=["image"], axcodes="RAS"),
             # ToTemplatelabeld(keys=['label']),
