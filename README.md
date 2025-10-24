@@ -150,6 +150,9 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --data_root_path DATA_DIR 
 CUDA_VISIBLE_DEVICES=0 python -W ignore test.py --resume ./out/epoch_61.pth --data_root_path DATA_DIR --store_result --cache_dataset --cache_rate 0.6
 ```
 
+## Continual Learning
+This part please refer to [ContinualLearning](https://github.com/MrGiovanni/ContinualLearning).
+
 ## Todo
 - [x] Code release
 - [x] Dataset link
